@@ -41,7 +41,6 @@ const ArtistList = ({ artists = [] }) => {
           flexDirection: "row", 
           flexWrap: "nowrap",   
           alignItems: "center",
-          gap: "5vw",
           animation: "scrollLeft 40s linear infinite",
           willChange: "transform"
         }}
@@ -80,12 +79,13 @@ const ArtistList = ({ artists = [] }) => {
                 position: "absolute",
                 bottom: "0px",
                 color: "white",
-                fontSize: "1.5rem",
+                fontSize: "2rem",
                 fontWeight: "bold",
                 textTransform: "uppercase",
                 textAlign: "center",
                 margin: 0,
                 zIndex: 10,
+                fontFamily: 'var(--heading-font)',
                 textShadow: "0px 4px 10px rgba(0,0,0,0.9), 0px 1px 3px rgba(0,0,0,1)" 
               }}
             >

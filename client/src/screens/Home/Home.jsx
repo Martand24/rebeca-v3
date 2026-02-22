@@ -10,11 +10,11 @@ import Schedule from "../Schedule_new/Schedule"
 
 const artists = [
     { name: "Amit Mishra", img: "AmitMishra.png" },
-    { name: "Anupam Roy Band", img: "anupamroyband.png" },
+    { name: "Anupam Roy Band", img: "AnupamRoyBand.png" },
     { name: "Anurag Halder", img: "anuraghalder.png" },
     { name: "Arunashish Roy", img: "ArunashishRoy.png" },
     { name: "Ash King", img: "ashking.png" },
-    { name: "Avoid Rafa", img: "AVOIDRAFA.png" },
+    { name: "Avoid Rafa", img: "avoidrafa.png" },
     { name: "Distorted Chromosomes", img: "destortedchromosomes.png" },
     { name: "DJ Neelashree", img: "djneelashree.png" },
     { name: "DJ Raxo", img: "djraxo.png" },
@@ -43,7 +43,7 @@ const Home = () => {
                 </div>
             </section>
             <section className="section-3">
-                <h1 className="date">MARCH 20-23</h1>
+                <h1 className="date">MARCH 19-22</h1>
                 <h4>Lords' Ground, IIEST Shibpur</h4>
                 <p>
                     Prepare to be swept away as you put your best foot forward in this epic celebration of creativity
