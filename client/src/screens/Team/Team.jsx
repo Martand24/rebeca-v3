@@ -21,10 +21,10 @@ import { East, Favorite } from "@mui/icons-material";
 import Heading from "../../components/Headingv2/Headingv2"
 
 const profs = [
-    { name: "Dr. Debdulal Das", position: "Chairperson", img: "./assets/imgs/Faculty/debdulaldas.webp" },
+    { name: "Dr. Sekhar Mandal", position: "Chairman", img: "./assets/imgs/Faculty/sekharmandal.webp" },
     { name: "Dr. Rajib Chakraborty", position: "Joint Convenor", img: "./assets/imgs/Faculty/rajibchakraborty.webp" },
-    { name: "Dr. Gautam Anand", position: "Joint Convenor", img: "./assets/imgs/Faculty/gautamanand.webp" },
-    { name: "Dr. Santanu Maity", position: "Treasurer", img: "./assets/imgs/Faculty/santanumaity.webp" },
+    { name: "Dr. Dipankana Bhattacherjee", position: "Joint Convenor", img: "./assets/imgs/Faculty/dipankanabhattacherjee.webp" },
+    { name: "Dr. Ujjal Bhattacharjee", position: "Treasurer", img: "./assets/imgs/Faculty/ujjalbhattacharjee.webp" },
 ];
 
 const TeamLoading = () => {

@@ -47,7 +47,7 @@ const Footer2 = () => {
                             <div className="ph-num">Joint Convenor</div>
                         </div>
                         <div className="contact">
-                            <div className="name">Dr. Ujjal Bhattacherjee</div>
+                            <div className="name">Dr. Ujjal Bhattacharjee</div>
 
                             <div className="ph-num">Treasurer</div>
                         </div>
