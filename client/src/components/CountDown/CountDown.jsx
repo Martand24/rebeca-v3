@@ -48,7 +48,9 @@ const CountDown = () => {
                 <Box time={String(timeLeft.minutes).padStart(2, '0')} label="MINUTES" />
                 <Box time={String(timeLeft.seconds).padStart(2, '0')} label="SECONDS" />
             </div>
-           
+           <div className="backdrop">
+                <img src={"/assets/imgs/home/countdown-img.png"} />
+           </div>
         </section>
     );
 };

@@ -6,22 +6,24 @@
     color: #fff;
     position: relative;
     padding: 3rem 1rem;
-    background: 
-    linear-gradient(
-        to bottom, 
-        rgba(0, 0, 0, 0.8) 0%,    /* Dark at the very top */
-        transparent 100%,          /* Clear in the upper-middle */
-        transparent 100%,          /* Clear in the lower-middle */
-        rgba(0, 0, 0, 0.8) 100%   /* Dark at the very bottom */
-    ),
-    url("/assets/imgs/home/countdown-img.png") no-repeat top;
-    background-size: cover;
     width: 100%;
     min-height: 80vh;
 }
 
 .timer * {
     z-index: 1;
+}
+
+.timer .backdrop {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+}
+
+.timer .backdrop img {
+    height: 500px;
 }
 
 .timer .plane {
