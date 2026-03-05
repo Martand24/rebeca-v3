@@ -20,15 +20,16 @@
     left: 50%;
     transform: translateX(-50%);
     opacity: 0.5;
+    width: min(1200px, 100vw);
 }
 
 .timer .backdrop img {
-    height: 500px;
+    /* height: 500px; */
+    width: 100%;
 }
 
 .timer .plane {
     position: absolute;
-    width: min(900px, 100vw);
     top: 0;
     /* left: 50%;
     transform: translateX(-50%); */

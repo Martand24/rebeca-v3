@@ -58,7 +58,6 @@ const GsapScrubber = () => {
         // Show button once the first image loads
         images[0].onload = () => {
             render();
-            setShowScrollBtn(true);
         };
 
         const tl = gsap.timeline({
