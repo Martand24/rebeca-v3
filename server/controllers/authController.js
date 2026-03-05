@@ -5,6 +5,7 @@ const User = require("../models/userModel");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const { createUser } = require("./userController");
+const sendEmail = require("../utils/email");
 
 // --- Keep your existing signToken and createSendToken functions here ---
 const signToken = (id) => {
@@ -64,6 +65,9 @@ exports.googleAuth = catchAsync(async (req, res, next) => {
             googleId: sub,
         });
         statusCode = 201; // Created
+        await sendEmail('welcome', email, {
+            name: name,
+        });
     }
 
     // 5. Send your custom App JWT via Cookie (The Jonas Way)

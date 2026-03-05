@@ -1,22 +1,23 @@
 const Email = require('email-templates');
 const nodemailer = require('nodemailer');
 const path = require('path');
-
+const dotenv = require('dotenv');
+dotenv.config();
 // 1. Configure the SMTP Transporter (Hostinger)
 const transporter = nodemailer.createTransport({
-  host: 'sandbox.smtp.mailtrap.io',
-  port: 465,
+  host: process.env.SMTP_HOST,
+  port: process.env.SMTP_PORT,
 //   secure: true, // true for 465, false for other ports
   auth: {
-    user: 'cbea18942c9e61', // Your PRIMARY login
-    pass: '4ae9148caa553e',
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
   },
 });
 
 // 2. Initialize the Email Client
 const emailClient = new Email({
   message: {
-    from: '"Rebeca Support" <support@rebeca.in>'
+    from: `"Rebeca Support" <${process.env.SMTP_USER_ALIAS || process.env.SMTP_USER}>`, // Use alias if provided, else fallback to SMTP_USER
   },
   send: true, // Set to true to actually send emails
   transport: transporter,
