@@ -5,6 +5,6 @@
       "source": "/api/v3/:path*",
       "destination": "http://13.51.150.149:8000/api/v3/:path*"
     }
-  ]
-  "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }],
+  ],
+  "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }]
 }
