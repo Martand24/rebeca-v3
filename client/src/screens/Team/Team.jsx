@@ -27,21 +27,6 @@ const profs = [
     { name: "Dr. Ujjal Bhattacherjee", position: "Treasurer", img: "./assets/imgs/Faculty/ujjal_bhattacharjee.webp" },
 ];
 
-const TeamLoading = () => {
-    return (
-        <div className="teamspage-loading" style={{height: '50vh'}}>
-            <Card sx={{ width: "min(100%, 400px)" }}>
-                <CardContent style={{ display: "flex", alignItems: "center", flexDirection: "column", width: "100%" }}>
-                    <CircularProgress color="primary" size={80} thickness={5} />
-                    <Typography variant="h5">Hang tight, Fetching Teams Data...</Typography>
-                    <Typography variant="body1" color="grey" sx={{ mb: 2, textAlign: "center" }}>
-                        The best part of any party? When it becomes a story you swear you'll never tell.
-                    </Typography>
-                </CardContent>
-            </Card>
-        </div>
-    );
-};
 
 function ProfessorsList() {
     return (
@@ -76,29 +61,6 @@ function ProfessorsList() {
 const Team = () => {
     const {allTeams} = useAuth()
 
-    // useEffect(() => {
-    //     const handleFetchAdmins = async () => {
-    //         try {
-    //             setLoading(true);
-    //             const res = await getAllAdmins();
-    //             const admins = res.data?.data;
-    //             console.log(admins);
-    //             const nteamsData = JSON.parse(JSON.stringify(teamIcons));
-    //             admins.map((admin) => {
-    //                 var index = teamNameToId[admin.team];
-    //                 nteamsData[index - 1]?.members.push(admin);
-    //             });
-    //             setTeamData(nteamsData);
-    //         } catch (err) {
-    //             console.log(err);
-    //         } finally {
-    //             setLoading(false);
-    //         }
-    //     };
-
-    //     handleFetchAdmins();
-    // }, [user]);
-
     return (
         allTeams && (
             <div className="team">
@@ -113,10 +75,11 @@ const Team = () => {
                     margin: "2rem 0",
                     borderRadius: "5px"
                 }}>
-                    <Typography textAlign={"center"} sx={{fontSize: "1.2rem", maxWidth: '70ch'}} color="text.secondary">
+                    <Typography textAlign={"center"} sx={{fontSize: "1.2rem", maxWidth: '70ch', fontFamily: 'var(--body-font)'}} color="text.secondary">
                     We are excited to invite you to be a part of REBECA as a <b>volunteer</b>! This is your chance to contribute, gain hands-on experience, and be a part of an incredible event. Whether you're interested in event management, social media, technical support, or hospitality, there's a place for you on our team!
                     </Typography>
                     <Button
+                        size="large"
                         variant="contained"
                         startIcon={<Favorite />}
                         endIcon={<East />}

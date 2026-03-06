@@ -17,12 +17,12 @@ export default function RoundCard({ name, start, end, venue, i, hideHeading }) {
                     >
                         <Typography gutterBottom sx={{ color: "#4dabf5", fontSize: 14, my: 0 }}>
                             {`Round ${i + 1}`}
-                        </Typography>
-                        {/* <Tooltip title={name}>
+                        </Typography>{" "}
+                        <Tooltip title={name}>
                             <Typography fontSize={24} fontWeight={800} lineHeight={1}>
                                 {name.slice(0, 12) + (name.length > 12 ? "..." : "")}
                             </Typography>
-                        </Tooltip> */}
+                        </Tooltip>
                     </Paper>
                 )}
                 <Box sx={{ mt: 2 }}>

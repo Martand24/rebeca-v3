@@ -13,7 +13,7 @@ import {
 import { Settings, Logout } from "@mui/icons-material"; // Import icons
 import { useAuth } from "../../AuthContext";
 import { useNavigate } from "react-router-dom";
-import { GoogleLogin } from "@react-oauth/google";
+import { useGoogleLogin } from "@react-oauth/google";
 
 import "./AccountMenu.css";
 
@@ -21,12 +21,11 @@ export default function AccountMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const { user, handleLoginSuccess, handleLogout, userLoad } = useAuth();
     const navigate = useNavigate();
-    
+
     // Boolean to check if menu is open based on anchor element existence
     const open = Boolean(anchorEl);
 
     // --- Handlers ---
-    
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
@@ -50,8 +49,12 @@ export default function AccountMenu() {
         setTimeout(() => navigate("/"), 500);
     };
 
+    const login = useGoogleLogin({
+        onSuccess: handleSuccess,
+        onError: () => console.log("Login Failed"),
+    });
+    
     // --- Render ---
-
     return user ? (
         <React.Fragment>
             {/* The Trigger Button */}
@@ -138,14 +141,11 @@ export default function AccountMenu() {
             </Menu>
         </React.Fragment>
     ) : (
-        <GoogleLogin
-            onSuccess={handleSuccess}
-            onError={() => console.error("Login Failed")}
-            disabled={userLoad}
-            theme="filled_black"
-            logo_alignment="center"
-            shape="circle"
-            text="signin"
-        />
+    <button className="google-btn" onClick={() => login()}>
+      <span className="google-icon">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" />
+      </span>
+      <span className="google-text">Sign in</span>
+    </button>
     );
 }

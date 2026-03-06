@@ -24,7 +24,7 @@
 }
 .footer2 .right-col {
     /* background-color: rgba(255, 255, 0, 0.443); */
-    width: 40%;
+    width: 45%;
     /* border: 2px solid red; */
 }
 .footer2 .left-col .logo {
@@ -100,9 +100,11 @@
 }
 .footer2 .right-col .contacts .contact .name {
     color: rgba(255, 255, 255, 0.783);
+    font-size: 0.95rem;
 }
 .footer2 .right-col .contacts .contact .ph-num {
     color: rgba(255, 255, 255, 0.466);
+    font-size: 0.95rem;
 }
 
 .footer2 .right-col .contacts .contact .ph-num .material-icons {

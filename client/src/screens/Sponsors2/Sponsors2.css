@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 5rem;
     width: 100%;
 }
 
@@ -21,7 +20,7 @@
 }
 
 .sponsors2 section h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     color: #ffffff77;
 }
 
@@ -58,6 +57,7 @@
 
 .sponsors2 .intro p {
     width: min(100%, 45ch);
+    color: #fff;
     text-align: center;
 }
 
@@ -70,7 +70,6 @@
 }
 
 .sponsors2 .college h1 {
-    font-family: var(--body-font);
     text-align: left;
     z-index: 2;
 }

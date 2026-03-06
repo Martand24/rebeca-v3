@@ -21,7 +21,7 @@ const artists = [
     { name: "Jannat Sufi Band", img: "JannatSufiBand.png" },
     { name: "MD Irfan", img: "mdirfan.png" },
     { name: "M Sonic", img: "MSonic.png" },
-    { name: "Pata", img: "pata.png" },
+    { name: "Pota", img: "pata.png" },
     { name: "Pritam Roy", img: "pritamroy.png" },
     { name: "Prithbi", img: "prithbi.png" },
     { name: "Senjuti Das", img: "SenjutiDas.png" }
@@ -34,7 +34,7 @@ const Home = () => {
                 <img src="/assets/imgs/home/wavy_bg.webp" alt="" />
             </div>
             <Hero />
-            <section className="section-2">
+            <section className="section-2" id="are-you-ready">
                 <div className="banner">
                     <div className="">BEings, are you ready?</div>
                     <div className="">the countdown to our very own Pujo has already begun!</div>

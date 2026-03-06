@@ -18,6 +18,7 @@ const Sponsors2 = () => {
                     bases meets the vibrant energy of today's brightest engineering minds.
                 </p>
                 <Button
+                    size={"large"}
                     innerText={"Download Brochure"}
                     onClick={() =>
                         window.open(

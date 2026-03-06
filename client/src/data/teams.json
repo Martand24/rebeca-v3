@@ -83,6 +83,14 @@
                 "img": "",
                 "name": "Yaswanth Pedapudi ",
                 "tagline": "Phoenix"
+            },
+            {
+                "name": "Aditya Singh",
+                "tagline": "."
+            },
+            {
+                "name": "Deepak Garg",
+            "tagline": "#Alumini Business Meet"
             }
         ]
     },
@@ -122,8 +130,16 @@
             },
             {
                 "img": "",
-                "name": "Sumit Kumar ",
+                "name": "Sumit Kumar",
                 "tagline": "Reconnect, Relive and Reimagine "
+            },
+            {
+                "img": "",
+                "name": "Alok Raj Tiger"
+            },
+            {
+                "img": "",
+                "name": "Chennupalli Sathwik"
             }
         ]
     },
@@ -170,6 +186,14 @@
                 "img": "",
                 "name": "Viresh Awasthi",
                 "tagline": "Chai piyo, biscuit khao."
+            },
+            {
+                "img": "",
+                "name": "Vishwas Raj"
+            },
+            {
+                "img": "",
+                "name": "Pritam Roy"
             }
         ]
     },
@@ -244,8 +268,16 @@
             },
             {
                 "img": "",
-                "name": "Suryansh Singh ",
+                "name": "Suryansh Singh",
                 "tagline": "Chaos? Curated."
+            },
+            {
+                "img": "",
+                "name": "Rohit Rahul Patil"
+            },
+            {
+                "img": "",
+                "name": "Aman Raj"
             }
         ]
     },
@@ -323,6 +355,18 @@
                 "img": "",
                 "name": "Tanushree Gupta ",
                 "tagline": "Through her lens"
+            },
+            {
+                "img": "",
+                "name": "Anshika Gupta"
+            },
+            {
+                "img": "",
+                "name": "Karan Mahato"
+            },
+            {
+                "img": "",
+                "name": "Wankhede Aman Daulat"
             }
         ]
     },
@@ -384,6 +428,9 @@
                 "img": "",
                 "name": "Zaid Akhter ",
                 "tagline": "What if I fall? What if I fly?"
+            },
+            {
+                "name": "Avishikta Das"
             }
         ]
     },
@@ -435,6 +482,9 @@
                 "img": "",
                 "name": "Subhoshri Pal",
                 "tagline": "To thine own self"
+            },
+            {
+                "name": "Aman Rathore"
             }
         ]
     },
@@ -481,6 +531,15 @@
                 "img": "",
                 "name": "Rohan Ghosal ",
                 "tagline": "Rohan Ghosal , SOMS "
+            },
+            {
+                "name": "Satyam Kumar"
+            },
+            {
+                "name": "Siddharth Patel"
+            },
+            {
+                "name": "Anjali Kumari"
             }
         ]
     },
@@ -578,6 +637,9 @@
                 "img": "",
                 "name": "Tarishi Sharma ",
                 "tagline": "\"Where Culture Powers Creation.\""
+            },
+            {
+                "name": "Mridul Goyal"
             }
         ]
     },
@@ -599,6 +661,9 @@
                 "img": "",
                 "name": "Dhruv kumar",
                 "tagline": "Dreams comes true when passion meet execution "
+            },
+            {
+                "name": "Saptami Kar"
             }
         ]
     },
@@ -630,6 +695,15 @@
                 "img": "",
                 "name": "Satyam kumar",
                 "tagline": "Let the work speak."
+            },
+            {
+                "name": "Kunal Bhasker"
+            },
+            {
+                "name": "Piyush Raj"
+            },
+            {
+                "name": "Sonket Shaw"
             }
         ]
     },
@@ -732,6 +806,9 @@
                 "img": "",
                 "name": "Yasharth Shukla",
                 "tagline": "I am stuck here ..... UwU"
+            },
+            {
+                "name": "Suraj Kashyap"
             }
         ]
     }

@@ -72,6 +72,20 @@ const Footer2 = () => {
                                 <span className="material-icons">phone</span>+91-86687-98948
                             </div>
                         </div>
+                        <div className="contact">
+                            <div className="name">Rohan Vikas Kudtudkar</div>
+
+                            <div className="ph-num" style={{whiteSpace: "nowrap"}}>
+                                <span className="material-icons">phone</span>+91-93212-34023 
+                            </div>
+                        </div>
+                        <div className="contact">
+                            <div className="name">Shubhayu Sarkar</div>
+
+                            <div className="ph-num" style={{whiteSpace: "nowrap"}}>
+                                <span className="material-icons">phone</span>+91-93192-00435
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="social">

@@ -1,13 +1,17 @@
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const Register = require("../models/RegisterModel");
+const sendEmail = require("../utils/email");
 
 exports.createReg = catchAsync(async (req, res, next) => {
     console.log("Register Creation");
     try {
         const regData = req.body;
-        console.log(req.body)
         const creation = await Register.create(regData);
+        await sendEmail('event-registration', req.user.email, {
+            name: req.user.name,
+            eventName: req.body.event,
+        });
         res.status(200).json({
             status: "success",
             message: "Registration Created successfully.",

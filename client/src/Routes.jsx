@@ -6,7 +6,6 @@ import Schedule from "./screens/Schedule/Schedule";
 
 // import Daydetails from "./screens/Daydetails/Daydetails";
 import Merchandise from "./screens/Merchandise/Merchandise";
-import ComingSoon2k26 from "./screens/ComingSoon2k26/ComingSoon2k26";
 import Team from "./screens/Team/Team";
 import EventSingle from "./screens/EventSingle/EventSingle";
 import ProfileDashboard from "./components/ProfileInfo/ProfileInfo";

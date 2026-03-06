@@ -1,16 +1,19 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { IconButton, Fade } from "@mui/material";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const GsapScrubber = () => {
     const canvasRef = useRef(null);
     const sectionRef = useRef(null);
-    const containerRef = useRef(null); // Ref for the inner wrapper
+    const containerRef = useRef(null);
     const wordsRef = useRef([]);
-    const words = ["Welcome", "To", "Rebeca", "", ""];
+    const scrollTop = document.getElementById("are-you-ready");
 
+    const words = ["Welcome", "To", "Rebeca", "", ""];
     const totalFrames = 120;
     const getFrameUrl = (index) => `/rebeca-pink-frames/ezgif-frame-${(index + 1).toString().padStart(3, "0")}.webp`;
 
@@ -29,7 +32,6 @@ const GsapScrubber = () => {
         const render = () => {
             const img = images[airpods.frame];
             if (!img) return;
-
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
 
@@ -53,21 +55,22 @@ const GsapScrubber = () => {
             context.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
         };
 
-        images[0].onload = render;
+        // Show button once the first image loads
+        images[0].onload = () => {
+            render();
+        };
 
-        // --- ISOLATED TIMELINE ---
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: sectionRef.current, // Start when this section hits the top
+                trigger: sectionRef.current,
                 start: "top top",
-                end: "+=500%", // Scroll distance is 5x the viewport height
+                end: "+=500%",
                 scrub: 1,
-                pin: true, // This "locks" the component in place while animating
+                pin: true,
                 anticipatePin: 1,
             },
         });
 
-        // 1. Image Sequence
         tl.to(
             airpods,
             {
@@ -79,12 +82,10 @@ const GsapScrubber = () => {
             0,
         );
 
-        // 2. Text Sequence (Using your exact 12-frame interval and 0.05 offsets)
         words.forEach((_, i) => {
             const targetFrame = (i + 1) * 12;
             const startTime = targetFrame / totalFrames;
 
-            // FADE IN: Triggers exactly at (startTime - 0.05)
             tl.to(
                 wordsRef.current[i],
                 {
@@ -97,9 +98,7 @@ const GsapScrubber = () => {
                 startTime - 0.05,
             );
 
-            // FADE OUT: Only occurs if it's NOT the last word
-            // Triggers exactly at (startTime + 0.05)
-            if (i != 2) {
+            if (i !== 2) {
                 tl.to(
                     wordsRef.current[i],
                     {
@@ -111,22 +110,17 @@ const GsapScrubber = () => {
                     },
                     startTime + 0.05,
                 );
-            } else {
-                console.log(i);
             }
         });
 
         window.addEventListener("resize", render);
-
         return () => {
             window.removeEventListener("resize", render);
-            // Clean up triggers for this specific instance
             ScrollTrigger.getAll().forEach((t) => t.kill());
         };
     }, []);
 
     return (
-        /* The "Trigger" section. No height needed, GSAP 'pin' handles it */
         <section ref={sectionRef} style={{ overflow: "hidden", backgroundColor: "#000" }}>
             <div
                 ref={containerRef}
@@ -137,6 +131,7 @@ const GsapScrubber = () => {
                     alignItems: "center",
                     justifyContent: "center",
                     position: "relative",
+                    zIndex: 0,
                 }}
             >
                 {words.map((word, index) => (
@@ -164,6 +159,30 @@ const GsapScrubber = () => {
                 ))}
 
                 <canvas ref={canvasRef} style={{ display: "block" }} />
+
+                {/* --- THE SCROLL BUTTON --- */}
+
+                <IconButton
+                    onClick={() =>
+                        window.scrollTo({
+                            top: scrollTop.offsetTop,
+                            behavior: "smooth",
+                        })
+                    }
+                    sx={{
+                        position: "absolute",
+                        bottom: 40,
+                        zIndex: 20,
+                        color: "white",
+                        border: "1.5px solid rgba(255, 255, 255, 0.53)",
+                        animation: "bounce 2s infinite",
+                        backdropFilter: "blur(20px)",
+                        boxShadow: "0 0 10px #000",
+                        bgcolor: "var(--accent2)"
+                    }}
+                >
+                    <KeyboardArrowDownIcon fontSize="large" />
+                </IconButton>
             </div>
         </section>
     );

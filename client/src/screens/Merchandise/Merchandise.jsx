@@ -1,13 +1,11 @@
 import React from "react";
 import "./Merchandise.css";
-import Heading from "../../components/Heading/Heading";
 import Button from "../../components/Button/Button";
 
 const Merchandise = () => {
     return (
         <div className="merch">
             <section className="section-1">
-                <Heading title={"Merhandise"} subTitle={"Step into the world of REBECA in style! "}></Heading>
             </section>
             <section className="section-2">
                 <div className="img">

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./EventSingle.css";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../../AuthContext";
-import { extractFullDate, extractTime } from "../../components/EventList/EventList";
 import RoundCard from "./RoundCard";
 import { Alert, ButtonGroup, Button, Chip } from "@mui/material";
 import { CheckCircleRounded, Tag, Warning } from "@mui/icons-material";
@@ -10,6 +9,39 @@ import CustomAvatar from "../../components/CustomAvatar/CustomAvatar";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import GavelIcon from "@mui/icons-material/Gavel";
 import { Person2Rounded } from "@mui/icons-material";
+
+export const extractFullDate = (isoString, removeYear = false) => {
+    if (!isoString) return "";
+
+    // If input already looks like a human-friendly schedule string, return it.
+    if (typeof isoString === "string" && /Day\s*\d+/i.test(isoString)) return isoString;
+
+    const date = new Date(isoString);
+    if (isNaN(date.getTime())) return isoString || "";
+
+    const day = date.getDate();
+    const month = new Intl.DateTimeFormat("en-US", { month: "short" }).format(date);
+    const year = date.getFullYear();
+
+    const startTime = date.toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+    });
+
+    let ordinalSuffix = "th";
+    if (day % 10 === 1 && day !== 11) {
+        ordinalSuffix = "st";
+    } else if (day % 10 === 2 && day !== 12) {
+        ordinalSuffix = "nd";
+    } else if (day % 10 === 3 && day !== 13) {
+        ordinalSuffix = "rd";
+    }
+
+    const formattedTime = `${day}${ordinalSuffix} ${month}${removeYear ? "" : " " + year}, ${startTime}`;
+
+    return formattedTime;
+};
 
 function isGoogleForm(url) {
     if (!url) return false;

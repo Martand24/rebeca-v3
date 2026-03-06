@@ -5,6 +5,7 @@
     "slug": "inaugration",
     "type": "performance",
     "registration": "https://example.com/register",
+    "regfee": 0,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
@@ -12,7 +13,7 @@
     "startTime": "2026-03-19T17:00:00",
     "rounds": [],
     "coords": [],
-    "prizemoney": {}
+    "prizemoney": { }
   },
   {
     "name": "Reflexobeta Performance",
@@ -27,25 +28,27 @@
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
-    "startTime": "2026-03-19T18:00:00",
+    "startTime": "2026-03-19T19:00:00",
     "rounds": [
       {
         "no": 1,
         "name": "Reflexobeta Performance",
-        "desc": "dance performance by reflexobeta",
-        "start": "Day 1 18:00",
-        "end": "Day 1 19:00",
+        "desc": "Dance showcase",
+        "start": "Day 1 19:00",
+        "end": "Day 1 20:00",
         "venue": "Main Stage"
       }
     ],
-    "coords": [],
-    "prizemoney": {}
+    "coords": [
+      
+    ],
+    "prizemoney": { }
   },
   {
     "name": "Euphony Performance",
-    "desc": "Music performance by euphony",
+    "desc": "song performance by euphony",
     "slug": "euphony-performance",
-    "type": "performance",
+    "type": "performance" ,
     "minTeamSize": 1,
     "maxTeamSize": 4,
     "registration": "https://example.com/register",
@@ -54,19 +57,21 @@
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
-    "startTime": "2026-03-19T19:00:00",
+    "startTime": "2026-03-19T20:00:00",
     "rounds": [
       {
         "no": 1,
         "name": "Euphony Performance",
-        "desc": "Music performance by euphony",
-        "start": "Day 1 19:00",
-        "end": "Day 1 20:00",
+        "desc": "Music performance",
+        "start": "Day 1 20:00",
+        "end": "Day 1 21:30",
         "venue": "Main Stage"
       }
     ],
-    "coords": [],
-    "prizemoney": {}
+    "coords": [
+     
+    ],
+    "prizemoney": { }
   },
   {
     "name": "Classical Artist",
@@ -92,8 +97,10 @@
         "venue": "Main Stage"
       }
     ],
-    "coords": [],
-    "prizemoney": {}
+    "coords": [
+      
+    ],
+    "prizemoney": {  }
   },
   {
     "name": "College Artist",
@@ -114,18 +121,23 @@
         "no": 1,
         "name": "College Artist",
         "desc": "performance by college students",
-        "start": "Day 1 23:00",
-        "end": "Day 1 00:00",
+        "start": "Day 1 20:00",
+        "end": "Day 1 21:30",
         "venue": "Main Stage"
       }
     ],
-    "coords": [],
-    "prizemoney": {}
+    "coords": [
+     
+    ],
+    "prizemoney": {  }
   },
   {
     "name": "Film Fiesta (Movie Screening)",
     "desc": "A movie will be screened in the night at the lords ground",
     "slug": "film-fiesta",
+    "type": "performance",
+    "minTeamSize": 1,
+    "maxTeamSize": 4,
     "registration": "https://example.com/register",
     "regfee": 200,
     "poster": "https://placehold.co/600x400.jpg",
@@ -137,28 +149,21 @@
       {
         "no": 1,
         "name": "Film Fiesta",
-        "desc": "A movie will be screened in the night at the lords ground .",
+        "desc": "Movie screening",
         "start": "Day 1 01:00",
         "end": "Day 1 03:00",
         "venue": "Main Stage"
       }
     ],
     "coords": [
-      {
-        "name": "Mittapally Sairaj",
-        "email": "coord1@example.com",
-        "phone": "9949722522"
-      },
-      {
-        "name": "Swachchhotoya Aich",
-        "email": "",
-        "phone": "8420663581"
-      }
-    ]
+      { "name": "Mittapally Sairaj", "email": "coord1@example.com", "phone": "9949722522" },
+      { "name" : "Swachchhotoya Aich", "email"  :"" , "phone" : "8420663581"}
+    ],
+    "prizemoney": {  }
   },
   {
     "name": "Flying Solo",
-    "desc": "A solo music competition divided into Vocal and Instrumental categories, featuring online preliminaries and live stage finals.",
+    "desc": "Solo singing competition",
     "slug": "flying-solo",
     "type": "single",
     "minTeamSize": 1,
@@ -174,33 +179,22 @@
       {
         "no": 1,
         "name": "Flying Solo",
-        "desc": "A solo music competition divided into Vocal and Instrumental categories, featuring online preliminaries and live stage finals.",
+        "desc": "Solo singing",
         "start": "Day 2 10:00",
         "end": "Day 2 13:00",
         "venue": "I-HALL"
       }
     ],
     "coords": [
-      {
-        "name": "Shivam Yadav",
-        "email": "",
-        "phone": "+91 6306768029"
-      },
-      {
-        "name": "Anurag Panja",
-        "email": "",
-        "phone": "+91 62960 29979"
-      }
+      { "name": "Shivam Yadav", "email": "", "phone": "+91 6306768029" },
+      { "name": "Anurag Panja", "email": "", "phone": "+91 62960 29979" }
     ],
-    "prizemoney": {
-      "first": 0,
-      "second": 0,
-      "third": 0
-    }
+    "prizemoney": { "first": 0, "second": 0, "third": 0 }
   },
+
   {
-    "name": "Oxford Style DEBATE",
-    "desc": "A formal debate competition where two teams of two debaters each (Proposition and Opposition) argue a motion through opening statements and rebuttals.",
+    "name": "Debate",
+    "desc": "Debate competition",
     "slug": "debate",
     "type": "single",
     "minTeamSize": 1,
@@ -215,34 +209,23 @@
     "rounds": [
       {
         "no": 1,
-        "name": "Oxford Style DEBATE",
-        "desc": "A formal debate competition where two teams of two debaters each (Proposition and Opposition) argue a motion through opening statements and rebuttals.",
+        "name": "Debate",
+        "desc": "Argument battle",
         "start": "Day 2 11:00",
         "end": "Day 2 17:00",
         "venue": "SNT"
       }
     ],
     "coords": [
-      {
-        "name": "Karan Mandal",
-        "email": "",
-        "phone": "+916289021250"
-      },
-      {
-        "name": "Anubhav Kumar",
-        "email": "",
-        "phone": "+919749201712"
-      }
+      { "name": "Karan Mandal", "email": "", "phone": "+916289021250" },
+      { "name": "Anubhav Kumar", "email": "", "phone": "+919749201712" }
     ],
-    "prizemoney": {
-      "first": 7000,
-      "second": 3500,
-      "third": 1500
-    }
+    "prizemoney": { "first": 7000, "second": 3500, "third": 1500 }
   },
+
   {
     "name": "Dumb Charades",
-    "desc": "A knockout-style game for teams, they must guess movie or TV series names from chits within a time limit.",
+    "desc": "Movie guessing game",
     "slug": "dumb-charades",
     "type": "team",
     "minTeamSize": 2,
@@ -258,7 +241,7 @@
       {
         "no": 1,
         "name": "Dumb Charades",
-        "desc": "A knockout-style game for teams, they must guess movie or TV series names from chits within a time limit.",
+        "desc": "Act and guess",
         "start": "Day 2 14:00",
         "end": "Day 2 16:00",
         "venue": "Gallery 3"
@@ -266,33 +249,21 @@
       {
         "no": 2,
         "name": "Dumb Charades",
-        "desc": "A knockout-style game for teams, they must guess movie or TV series names from chits within a time limit.",
+        "desc": "Act and guess",
         "start": "Day 3 15:00",
         "end": "Day 3 17:00",
         "venue": "Gallery 3"
       }
     ],
     "coords": [
-      {
-        "name": "Aritra Dutta",
-        "email": "",
-        "phone": "+91 78659 79275"
-      },
-      {
-        "name": "Swastika Ghosh",
-        "email": "",
-        "phone": "+91 86498 09402"
-      }
+      { "name": "Aritra Dutta", "email": "", "phone": "+91 78659 79275" },
+      { "name": "Swastika Ghosh", "email": "", "phone": "+91 86498 09402" }
     ],
-    "prizemoney": {
-      "first": 5000,
-      "second": 2500,
-      "third": 1000
-    }
+    "prizemoney": { "first": 5000, "second": 2500, "third": 1000 }
   },
   {
     "name": "Mono Act",
-    "desc": " A solo acting competition where participants perform an original or adapted act of under 3 minutes in Hindi, Bengali, or English.",
+    "desc": "Singles Drama performance",
     "slug": "mono-act",
     "type": "single",
     "minTeamSize": 1,
@@ -308,33 +279,21 @@
       {
         "no": 1,
         "name": "Mono Act",
-        "desc": " A solo acting competition where participants perform an original or adapted act of under 3 minutes in Hindi, Bengali, or English.",
+        "desc": "Singles Drama performance",
         "start": "Day 2 16:00",
         "end": "Day 2 18:00",
-        "venue": "Alumni Seminar Hall"
+        "venue": "ASH"
       }
     ],
     "coords": [
-      {
-        "name": "Karnadeep Patra",
-        "email": "",
-        "phone": "8337089279"
-      },
-      {
-        "name": "Ashutosh Kumar Dubey",
-        "email": "",
-        "phone": "9939950009"
-      }
+      { "name": "Karnadeep Patra", "email": "", "phone": "8337089279" },
+      { "name": "Ashutosh Kumar Dubey", "email": "", "phone": "9939950009" }
     ],
-    "prizemoney": {
-      "first": 5000,
-      "second": 2500,
-      "third": 1000
-    }
+    "prizemoney": { "first": 5000, "second": 2500, "third": 1000 }
   },
   {
     "name": "RXB",
-    "desc": "dance performance by reflexobeta",
+    "desc": "Dance Performance",
     "slug": "rxb-performance",
     "type": "performance",
     "minTeamSize": 1,
@@ -345,27 +304,21 @@
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
-    "startTime": "2026-03-20T18:00:00",
+    "startTime": "2026-03-20T16:00:00",
     "rounds": [
       {
         "no": 1,
-        "name": "RXB",
-        "desc": "dance performance by reflexobeta",
-        "start": "Day 2 18:00",
-        "end": "Day 2 20:30",
-        "venue": "Main Stage"
-      },
-      {
-        "no": 2,
-        "name": "RXB",
-        "desc": "dance performance by reflexobeta",
-        "start": "Day 2 20:30",
-        "end": "Day 2 21:30",
-        "venue": "Main Stage"
+        "name": "Mono Act",
+        "desc": "Singles Drama performance",
+        "start": "Day 2 16:00",
+        "end": "Day 2 18:00",
+        "venue": "ASH"
       }
     ],
-    "coords": [],
-    "prizemoney": {}
+    "coords": [
+     
+    ],
+    "prizemoney": {  }
   },
   {
     "name": "College Band",
@@ -380,95 +333,94 @@
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
-    "startTime": "2026-03-20T21:30:00",
+    "startTime": "2026-03-20T16:00:00",
     "rounds": [
       {
         "no": 1,
-        "name": "College Band",
-        "desc": "College band performance",
-        "start": "Day 2 21:30",
-        "end": "Day 2 22:30",
-        "venue": "Main Stage"
+        "name": "Mono Act",
+        "desc": "Singles Drama performance",
+        "start": "Day 2 16:00",
+        "end": "Day 2 18:00",
+        "venue": "ASH"
       }
     ],
-    "coords": [],
-    "prizemoney": {
-      "first": 5000,
-      "second": 2500,
-      "third": 1000
-    }
+    "coords": [
+     
+    ],
+    "prizemoney": { "first": 5000, "second": 2500, "third": 1000 }
   },
   {
     "name": "Artist Band",
     "desc": "Artist band performance",
     "slug": "artist-band-performance2",
     "type": "performance",
+    "minTeamSize": 1,
+    "maxTeamSize": 1,
     "registration": "https://example.com/register",
     "regfee": 150,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
-    "startTime": "2026-03-20T22:30:00",
+    "startTime": "2026-03-20T16:00:00",
     "rounds": [
       {
         "no": 1,
-        "name": "Artist Band",
-        "desc": "Artist band performance",
-        "start": "Day 2 22:30",
-        "end": "Day 2 00:00",
-        "venue": "Main Stage"
+        "name": "Mono Act",
+        "desc": "Singles Drama performance",
+        "start": "Day 2 16:00",
+        "end": "Day 2 18:00",
+        "venue": "ASH"
       }
     ],
-    "coords": []
+    "coords": [
+     
+    ],
+    "prizemoney": {  }
   },
   {
     "name": "Alum Band",
     "desc": "Alumni band performance",
-    "slug": "Alum-band-performance2",
+    "slug": "alum-band-performance2",
     "type": "performance",
+    "minTeamSize": 1,
+    "maxTeamSize": 1,
     "registration": "https://example.com/register",
     "regfee": 150,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
-    "startTime": "2026-03-20T00:00:00",
+    "startTime": "2026-03-20T16:00:00",
     "rounds": [
-      {
-        "no": 1,
-        "name": "Alum Band",
-        "desc": "Alumni band performance",
-        "start": "Day 2 00:00",
-        "end": "Day 2 01:00",
-        "venue": "Main Stage"
-      }
+     
     ],
-    "coords": []
+    "coords": [
+      
+    ],
+    "prizemoney": { "first": 5000, "second": 2500, "third": 1000 }
   },
   {
     "name": "DJ Night",
     "desc": "DJ performance",
     "slug": "dj-night2",
     "type": "performance",
+    "minTeamSize": 1,
+    "maxTeamSize": 1,
     "registration": "https://example.com/register",
     "regfee": 150,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
-    "startTime": "2026-03-20T01:00:00",
+    "startTime": "2026-03-20T16:00:00",
     "rounds": [
-      {
-        "no": 1,
-        "name": "DJ Night",
-        "desc": "DJ performance",
-        "start": "Day 2 01:00",
-        "end": "Day 2 03:00",
-        "venue": "Main Stage"
-      }
+      
     ],
-    "coords": []
+    "coords": [
+      
+    ],
+    "prizemoney": { }
   },
   {
     "name": "BAM",
@@ -484,22 +436,13 @@
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-21T10:00:00",
-    "rounds": [
-      {
-        "no": 1,
-        "name": "BAM",
-        "desc": "Business Alumni Meet",
-        "start": "Day 3 10:00",
-        "end": "Day 3 13:00",
-        "venue": "Alumni Seminar Hall"
-      }
-    ],
-    "coords": [],
-    "prizemoney": {}
+    "rounds": [],
+    "coords": [ ],
+    "prizemoney": { }
   },
   {
     "name": "Rang Manch",
-    "desc": "A theatrical showcase featuring two plays (one in Hindi and one in Bengali).",
+    "desc": "Rang Manch performance",
     "slug": "rang-manch",
     "type": "performance",
     "minTeamSize": 1,
@@ -511,87 +454,16 @@
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-21T14:00:00",
-    "rounds": [
-      {
-        "no": 1,
-        "name": "Rang Manch",
-        "desc": "A theatrical showcase featuring two plays (one in Hindi and one in Bengali).",
-        "start": "Day 3 14:00",
-        "end": "Day 3 18:00",
-        "venue": "I-HALL"
-      }
-    ],
+    "rounds": [ ],
     "coords": [
-      {
-        "name": "Aditya Dhanraj",
-        "email": "",
-        "phone": "9334754414"
-      },
-      {
-        "name": "Ayush Ranjan",
-        "email": "",
-        "phone": "8789916399"
-      }
+      { "name": "Aditya Dhanraj", "email": "", "phone": "9334754414" },
+      { "name": "Ayush Ranjan", "email": "", "phone": "8789916399" }
     ],
-    "prizemoney": {
-      "first": 5000,
-      "second": 2500,
-      "third": 1000
-    }
-  },
-  {
-    "name": "Dumb Charades",
-    "desc": "A knockout-style game for teams, they must guess movie or TV series names from chits within a time limit.",
-    "slug": "dumb-charades",
-    "type": "team",
-    "minTeamSize": 2,
-    "maxTeamSize": 4,
-    "registration": "https://example.com/register",
-    "regfee": 150,
-    "poster": "https://placehold.co/600x400.jpg",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
-    "thumbnail": "https://placehold.co/150x150.jpg",
-    "asset": "",
-    "startTime": "2026-03-21T14:00:00",
-    "rounds": [
-      {
-        "no": 1,
-        "name": "Dumb Charades",
-        "desc": "A knockout-style game for teams, they must guess movie or TV series names from chits within a time limit.",
-        "start": "Day 2 14:00",
-        "end": "Day 2 16:00",
-        "venue": "Gallery 3"
-      },
-      {
-        "no": 2,
-        "name": "Dumb Charades",
-        "desc": "A knockout-style game for teams, they must guess movie or TV series names from chits within a time limit.",
-        "start": "Day 3 15:00",
-        "end": "Day 3 17:00",
-        "venue": "Gallery 3"
-      }
-    ],
-    "coords": [
-      {
-        "name": "Aritra Dutta",
-        "email": "",
-        "phone": "+91 78659 79275"
-      },
-      {
-        "name": "Swastika Ghosh",
-        "email": "",
-        "phone": "+91 86498 09402"
-      }
-    ],
-    "prizemoney": {
-      "first": 5000,
-      "second": 2500,
-      "third": 1000
-    }
+    "prizemoney": { "first": 5000, "second": 2500, "third": 1000 }
   },
   {
     "name": "Footloose",
-    "desc": "A knockout-style street dance battle for teams of 4 to 8 dancers, featuring styles like Hip-Hop, Popping, and B-Boying.",
+    "desc": "Street dance battle",
     "slug": "footloose",
     "type": "team",
     "minTeamSize": 1,
@@ -607,33 +479,21 @@
       {
         "no": 1,
         "name": "Footloose",
-        "desc": "A knockout-style street dance battle for teams of 4 to 8 dancers, featuring styles like Hip-Hop, Popping, and B-Boying.",
+        "desc": "Dance battle",
         "start": "Day 3 16:00",
         "end": "Day 3 18:00",
         "venue": "Basketball Court"
       }
     ],
     "coords": [
-      {
-        "name": "Gyanshi",
-        "email": "",
-        "phone": "76786 24280"
-      },
-      {
-        "name": "Ankala Lakshmi Prabhashini",
-        "email": "",
-        "phone": "7396 658 079"
-      }
+      { "name": "Gyanshi", "email": "", "phone": "76786 24280" },
+      { "name": "Ankala Lakshmi Prabhashini", "email": "", "phone": "7396 658 079" }
     ],
-    "prizemoney": {
-      "first": 12000,
-      "second": 6000,
-      "third": 3000
-    }
+    "prizemoney": { "first": 12000, "second": 6000, "third": 3000 }
   },
   {
     "name": "Rockbuzz",
-    "desc": " A band competition for groups of 3 to 8 members, involving an online video submission prelim and a live stage performance for the top 10 finalists.",
+    "desc": "Rock music performance",
     "slug": "rockbuzz",
     "type": "performance",
     "minTeamSize": 1,
@@ -648,30 +508,18 @@
     "rounds": [
       {
         "no": 1,
-        "name": "Rockbuzz",
-        "desc": " A band competition for groups of 3 to 8 members, involving an online video submission prelim and a live stage performance for the top 10 finalists.",
-        "start": "Day 3 18:00",
-        "end": "Day 3 20:00",
-        "venue": "Main Stage"
+        "name": "Mono Act",
+        "desc": "Singles Drama performance",
+        "start": "Day 2 16:00",
+        "end": "Day 2 18:00",
+        "venue": "ASH"
       }
     ],
     "coords": [
-      {
-        "name": "Aritra Dutta",
-        "email": "",
-        "phone": "+91 78659 79275"
-      },
-      {
-        "name": "Swastika Ghosh",
-        "email": "",
-        "phone": "+91 86498 09402"
-      }
+      { "name": "Aritra Dutta", "email": "", "phone": "+91 78659 79275" },
+      { "name": "Swastika Ghosh", "email": "", "phone": "+91 86498 09402" }
     ],
-    "prizemoney": {
-      "first": 5000,
-      "second": 2500,
-      "third": 1000
-    }
+    "prizemoney": { "first": 5000, "second": 2500, "third": 1000 }
   },
   {
     "name": "Main Band",
@@ -690,38 +538,28 @@
     "rounds": [
       {
         "no": 1,
-        "name": "Main Band",
-        "desc": "Main Band performance",
-        "start": "Day 3 20:00",
-        "end": "Day 3 22:00",
-        "venue": "Main Stage"
+        "name": "Mono Act",
+        "desc": "Singles Drama performance",
+        "start": "Day 2 16:00",
+        "end": "Day 2 18:00",
+        "venue": "ASH"
       }
     ],
     "coords": [
-      {
-        "name": "Aritra Dutta",
-        "email": "",
-        "phone": "+91 78659 79275"
-      },
-      {
-        "name": "Swastika Ghosh",
-        "email": "",
-        "phone": "+91 86498 09402"
-      }
+      { "name": "Aritra Dutta", "email": "", "phone": "+91 78659 79275" },
+      { "name": "Swastika Ghosh", "email": "", "phone": "+91 86498 09402" }
     ],
-    "prizemoney": {
-      "first": 5000,
-      "second": 2500,
-      "third": 1000
-    }
+    "prizemoney": { "first": 5000, "second": 2500, "third": 1000 }
   },
   {
     "name": "Artist",
     "desc": "Main Artist performance",
     "slug": "main-artist-performance",
     "type": "performance",
+    "minTeamSize": 1,
+    "maxTeamSize": 1,
     "registration": "https://example.com/register",
-    "regfee": 0,
+    "regfee": 150,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
@@ -730,34 +568,28 @@
     "rounds": [
       {
         "no": 1,
-        "name": "Main Artist",
-        "desc": "Main Artist performance",
-        "start": "Day 3 22:00",
-        "end": "Day 3 00:00",
-        "venue": "Main Stage"
+        "name": "Mono Act",
+        "desc": "Singles Drama performance",
+        "start": "Day 2 16:00",
+        "end": "Day 2 18:00",
+        "venue": "ASH"
       }
     ],
     "coords": [
-      {
-        "name": "Aritra Dutta",
-        "email": "",
-        "phone": "+91 78659 79275"
-      },
-      {
-        "name": "Swastika Ghosh",
-        "email": "",
-        "phone": "+91 86498 09402"
-      }
+      { "name": "Aritra Dutta", "email": "", "phone": "+91 78659 79275" },
+      { "name": "Swastika Ghosh", "email": "", "phone": "+91 86498 09402" }
     ],
-    "prizemoney": {}
+    "prizemoney": { "first": 5000, "second": 2500, "third": 1000 }
   },
   {
     "name": "DJ Night",
     "desc": "DJ performance",
     "slug": "dj-night",
     "type": "performance",
+    "minTeamSize": 1,
+    "maxTeamSize": 1,
     "registration": "https://example.com/register",
-    "regfee": 0,
+    "regfee": 150,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
@@ -766,30 +598,23 @@
     "rounds": [
       {
         "no": 1,
-        "name": "DJ Night",
-        "desc": "DJ performance",
-        "start": "Day 3 00:00",
-        "end": "Day 3 02:00",
-        "venue": "Main Stage"
+        "name": "Mono Act",
+        "desc": "Singles Drama performance",
+        "start": "Day 2 16:00",
+        "end": "Day 2 18:00",
+        "venue": "ASH"
       }
     ],
     "coords": [
-      {
-        "name": "Aritra Dutta",
-        "email": "",
-        "phone": "+91 78659 79275"
-      },
-      {
-        "name": "Swastika Ghosh",
-        "email": "",
-        "phone": "+91 86498 09402"
-      }
+      { "name": "Aritra Dutta", "email": "", "phone": "+91 78659 79275" },
+      { "name": "Swastika Ghosh", "email": "", "phone": "+91 86498 09402" }
     ],
-    "prizemoney": {}
+    "prizemoney": { "first": 5000, "second": 2500, "third": 1000 }
   },
+
   {
     "name": "Solo Synergy + Sync Showcase",
-    "desc": "SA solo dance competition and group dance competition open to all classical and folk dance forms.",
+    "desc": "Solo dance competition",
     "slug": "solo-synergy-sync-showcase",
     "type": "single",
     "minTeamSize": 1,
@@ -805,33 +630,22 @@
       {
         "no": 1,
         "name": "Solo Synergy",
-        "desc": "A solo dance competition and group dance competition open to all classical and folk dance forms.",
+        "desc": "Solo dance",
         "start": "Day 4 11:00",
         "end": "Day 4 14:00",
         "venue": "I-HALL"
       }
     ],
     "coords": [
-      {
-        "name": "Manisha Singh",
-        "email": "",
-        "phone": "95089 01220"
-      },
-      {
-        "name": "Anusha Gupta",
-        "email": "",
-        "phone": "734 888 9994"
-      }
+      { "name": "Manisha Singh", "email": "", "phone": "95089 01220" },
+      { "name": "Anusha Gupta", "email": "", "phone": "734 888 9994" }
     ],
-    "prizemoney": {
-      "first": 10000,
-      "second": 5000,
-      "third": 2500
-    }
+    "prizemoney": { "first": 10000, "second": 5000, "third": 2500 }
   },
+
   {
     "name": "Verse Wars",
-    "desc": "A poetry competition where participants recite their original poems in English, Bangla, or Hindi.",
+    "desc": "Poetry battle competition",
     "slug": "verse-wars",
     "type": "team",
     "minTeamSize": 2,
@@ -842,38 +656,27 @@
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
-    "startTime": "2026-03-22T14:00:00",
+    "startTime": "2026-03-22T11:00:00",
     "rounds": [
       {
         "no": 1,
         "name": "Verse Wars",
-        "desc": "A poetry competition where participants recite their original poems in English, Bangla, or Hindi.",
+        "desc": "Poetry battle",
         "start": "Day 4 14:00",
         "end": "Day 4 16:00",
         "venue": "I-HALL"
       }
     ],
     "coords": [
-      {
-        "name": "Sayan Dutta",
-        "email": "",
-        "phone": "+91 81005 72965"
-      },
-      {
-        "name": "Abdullah Ali",
-        "email": "",
-        "phone": "+91 87773 28225"
-      }
+      { "name": "Sayan Dutta", "email": "", "phone": "+91 81005 72965" },
+      { "name": "Abdullah Ali", "email": "", "phone": "+91 87773 28225" }
     ],
-    "prizemoney": {
-      "first": 10000,
-      "second": 5000,
-      "third": 2500
-    }
+    "prizemoney": { "first": 10000, "second": 5000, "third": 2500 }
   },
+
   {
     "name": "Rebequiz",
-    "desc": " A trivia competition for teams, featuring questions based on the MELAS theme (Music, Entertainment, Literature, Arts, and Sports)",
+    "desc": "Quiz competition",
     "slug": "rebequiz",
     "type": "team",
     "minTeamSize": 1,
@@ -889,33 +692,21 @@
       {
         "no": 1,
         "name": "Rebequiz",
-        "desc": "A trivia competition for teams, featuring questions based on the MELAS theme (Music, Entertainment, Literature, Arts, and Sports)",
+        "desc": "General quiz",
         "start": "Day 4 14:00",
         "end": "Day 4 16:00",
-        "venue": "Alumni Seminar Hall"
+        "venue": "ASH"
       }
     ],
     "coords": [
-      {
-        "name": "Arya Roychowdhury",
-        "email": "",
-        "phone": "+91 87777 08431"
-      },
-      {
-        "name": "Prekshana Pal",
-        "email": "",
-        "phone": "+91 78722 27322"
-      }
+      { "name": "Arya Roychowdhury", "email": "", "phone": "+91 87777 08431" },
+      { "name": "Prekshana Pal", "email": "", "phone": "+91 78722 27322" }
     ],
-    "prizemoney": {
-      "first": 6000,
-      "second": 3000,
-      "third": 1500
-    }
+    "prizemoney": { "first": 6000, "second": 3000, "third": 1500 }
   },
   {
     "name": "Nukkad Natak",
-    "desc": "A street play or street theather based on a theme, to be performed by Les Thespian.",
+    "desc": "Drama performance",
     "slug": "nukkad-natak",
     "type": "performance",
     "minTeamSize": 1,
@@ -927,22 +718,14 @@
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-22T16:30:00",
-    "rounds": [
-      {
-        "no": 1,
-        "name": "Nukkad Natak",
-        "desc": "A street play or street theather based on a theme, to be performed by Les Thespian.",
-        "start": "Day 4 16:30",
-        "end": "Day 4 17:30",
-        "venue": "Netaji Bhavan"
-      }
-    ],
+    "rounds": [],
     "coords": [],
-    "prizemoney": {}
+    "prizemoney": {  }
   },
   {
     "name": "Fiducia",
-    "desc": "Step into the spotlight, own the runway, and let your style do the talking in Fiducia, a glamorous ramp walk and fashion showdown.",
+
+    "desc": "Fashion show ",
     "slug": "fiducia",
     "type": "performance",
     "minTeamSize": 1,
@@ -954,21 +737,12 @@
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-22T18:00:00",
-    "rounds": [
-      {
-        "no": 1,
-        "name": "Fiducia",
-        "desc": "Step into the spotlight, own the runway, and let your style do the talking in Fiducia, a glamorous ramp walk and fashion showdown.",
-        "start": "Day 4 18:00",
-        "end": "Day 4 20:00",
-        "venue": "Main Stage"
-      }
-    ],
+    "rounds": [],
     "coords": [],
-    "prizemoney": {}
+    "prizemoney": { }
   },
   {
-    "name": "College Band",
+    "name": "College Band" ,
     "desc": "College Band performance",
     "slug": "college-band-performance",
     "type": "performance",
@@ -981,18 +755,9 @@
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-22T20:00:00",
-    "rounds": [
-      {
-        "no": 1,
-        "name": "College Band",
-        "desc": "College Band performance",
-        "start": "Day 4 20:00",
-        "end": "Day 4 21:00",
-        "venue": "Main Stage"
-      }
-    ],
+    "rounds": [],
     "coords": [],
-    "prizemoney": {}
+    "prizemoney": { }
   },
   {
     "name": "Main Band",
@@ -1008,16 +773,7 @@
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-22T21:00:00",
-    "rounds": [
-      {
-        "no": 1,
-        "name": "Main Band",
-        "desc": "Main Band performance",
-        "start": "Day 4 21:00",
-        "end": "Day 4 22:30",
-        "venue": "Main Stage"
-      }
-    ],
+    "rounds": [],
     "coords": [],
     "prizemoney": {}
   },
@@ -1035,41 +791,25 @@
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-22T22:30:00",
-    "rounds": [
-      {
-        "no": 1,
-        "name": "Artist",
-        "desc": "Artist performance",
-        "start": "Day 4 22:30",
-        "end": "Day 4 00:30",
-        "venue": "Main Stage"
-      }
-    ],
-    "coords": [],
-    "prizemoney": {}
+    "rounds": [],
+    "coords": [ ],
+    "prizemoney": {  }
   },
   {
     "name": "DJ Night",
     "desc": "DJ Night performance",
     "slug": "dj-night-performance",
     "type": "performance",
+    "minTeamSize": 1,
+    "maxTeamSize": 1,
     "registration": "https://example.com/register",
     "regfee": 0,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
-    "startTime": "2026-03-22T00:30:00",
-    "rounds": [
-      {
-        "no": 1,
-        "name": "DJ Night",
-        "desc": "DJ Night performance",
-        "start": "Day 4 00:30",
-        "end": "Day 4 02:00",
-        "venue": "Main Stage"
-      }
-    ],
+    "startTime": "2026-03-23T00:30:00",
+    "rounds": [],
     "coords": [],
     "prizemoney": {}
   }
