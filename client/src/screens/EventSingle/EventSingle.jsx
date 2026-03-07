@@ -59,28 +59,6 @@ const EventSingle = () => {
     const [loading, setLoading] = useState(false);
     const oneEvent = allEvents.find((ev) => ev.slug === eventSlug);
 
-    useEffect(() => {
-        const checkReg = async () => {
-            try {
-                setLoading(true);
-                if (user && oneEvent) {
-                    const status = await isUserRegistered(oneEvent?._id, user?._id);
-                    // console.log("Status of registration of the user");
-                    // console.log(status);
-                    setIsReg(status.data.isRegistered);
-                } else {
-                    console.log("No user");
-                }
-            } catch (err) {
-                console.log(err);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        checkReg();
-    }, [user, oneEvent]);
-
     // Ensure allEvents is available before filtering
     if (!allEvents || allEvents.length === 0) {
         return <div style={{ height: "100vh", width: "100vw" }}>Loading...</div>;
@@ -118,7 +96,13 @@ const EventSingle = () => {
                             {oneEvent?.type !== "performance" && (
                                 <ButtonGroup variant="contained" size="large">
                                     {userRegs.includes(eventSlug) ? (
-                                        <Button startIcon={<CheckCircleRounded />} color="success">
+                                        <Button
+                                            startIcon={<CheckCircleRounded />}
+                                            color="success"
+                                            disableElevation
+                                            disableRipple
+                                            disableFocusRipple
+                                        >
                                             Registered
                                         </Button>
                                     ) : (
@@ -129,9 +113,10 @@ const EventSingle = () => {
                                     {oneEvent?.rulesdoc && (
                                         <Button
                                             endIcon={<GavelIcon />}
-                                            href={oneEvent?.rulesdoc || "rulesdoc"}
+                                            href={oneEvent?.rulesdoc}
                                             color="warning"
                                             target="_blank"
+                                            disabled={!oneEvent?.rulesdoc}
                                         >
                                             View Rules
                                         </Button>
@@ -216,9 +201,7 @@ const EventSingle = () => {
                         {oneEvent?.rounds?.map((round, i) => {
                             return (
                                 <RoundCard
-                                    name={
-                                        (oneEvent.type === "performance" ? "Details" : `Round ${i + 1}`)
-                                    }
+                                    name={oneEvent.type === "performance" ? "Details" : `Round ${i + 1}`}
                                     start={extractFullDate(round.start || round.startTime || oneEvent.startTime)}
                                     end={extractFullDate(round.end || round.endTime || "")}
                                     venue={round.venue}
