@@ -141,6 +141,7 @@
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
+    "type": "performance",
     "startTime": "2026-03-19T01:00:00",
     "rounds": [
       {
