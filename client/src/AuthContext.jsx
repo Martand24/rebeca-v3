@@ -21,27 +21,34 @@ import {
     MenuBook,
 } from "@mui/icons-material";
 const AuthContext = createContext();
-import { loginWithGoogle, logoutUser, checkAuthStatus, getAllEvents, getAllTeams, getAllUserRegs } from "./services/api";
+import {
+    loginWithGoogle,
+    logoutUser,
+    checkAuthStatus,
+    getAllEvents,
+    getAllTeams,
+    getAllUserRegs,
+} from "./services/api";
 import { googleLogout } from "@react-oauth/google";
 
 export const teamIcons = {
     "Secretary General": <AdminPanelSettings />,
-    "Finance": <AttachMoney />,
-    "Cultural": <Palette />,
-    "Events": <Event />,
+    Finance: <AttachMoney />,
+    Cultural: <Palette />,
+    Events: <Event />,
     "Resource Information": <Info />,
     "Travel and Logistics": <DirectionsBus />,
-    "Sponsorship": <Handshake />,
-    "Publication": <Article />,
-    "Publicity": <Campaign />,
+    Sponsorship: <Handshake />,
+    Publication: <Article />,
+    Publicity: <Campaign />,
     "Stage Decoration": <Brush />,
     "Business and Alumni Meet": <Groups />,
     "Competition and Seminars": <Code />,
     "Web Development": <Code />,
-    "Refreshments": <Restaurant />,
+    Refreshments: <Restaurant />,
     "Stage and Campus Decorations": <VolunteerActivism />,
-    "Volunteers": <VolunteerActivism />,
-    "Photography": <CameraAlt />,
+    Volunteers: <VolunteerActivism />,
+    Photography: <CameraAlt />,
     "Joint Secretary": <AssignmentInd />,
     "Fixed Signatory": <AccountBalance />,
     "BECA Magazine": <MenuBook />,
@@ -51,24 +58,24 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [userLoad, setUserLoad] = useState(false);
     const [allEvents, setAllEvents] = useState([]);
-    const [allEventsByDay, setAllEventsByDay] = useState({saptami: [], ashtami: [], navami: [], dashami: []});
+    const [allEventsByDay, setAllEventsByDay] = useState({ saptami: [], ashtami: [], navami: [], dashami: [] });
     const [allTeams, setAllTeams] = useState([]);
     const [teamsData, setTeamsData] = useState({});
     const { Notification, showNotification } = useNotification();
-    const [userRegs, setUserRegs] = useState([])
+    const [userRegs, setUserRegs] = useState([]);
 
     const handlesetEventsByDay = (e) => {
         const grouped = {
-            saptami: [],   // March 19
-            ashtami: [],   // March 20
-            navami: [],    // March 21
-            dashami: []    // March 22
+            saptami: [], // March 19
+            ashtami: [], // March 20
+            navami: [], // March 21
+            dashami: [], // March 22
         };
-        
-        e.forEach(event => {
+
+        e.forEach((event) => {
             const date = new Date(event.startTime);
             const day = date.getDate();
-            
+
             if (day === 19) {
                 grouped.saptami.push(event);
             } else if (day === 20) {
@@ -79,32 +86,32 @@ export const AuthProvider = ({ children }) => {
                 grouped.dashami.push(event);
             }
         });
-        
+
         setAllEventsByDay(grouped);
-    }
+    };
 
     useEffect(() => {
         // load events
         try {
             const e = getAllEvents();
             setAllEvents(e);
-            handlesetEventsByDay(e)
+            handlesetEventsByDay(e);
             const t = getAllTeams();
             setAllTeams(t);
         } catch (err) {
-            showNotification(`Err: ${err}`, 'error');
+            showNotification(`Err: ${err}`, "error");
         }
     }, []);
-    
+
     const handleAllUserRegs = async () => {
         try {
             const ev = await getAllUserRegs();
             console.log("All events registered by user: ", ev.data.data.regs);
             setUserRegs(ev.data.data.regs.map((e) => e.event));
         } catch (err) {
-            showNotification(`Err: ${err}`, 'error');
+            showNotification(`Err: ${err.response?.data?.message || 'error fetching userRegs'}`, "error");
         }
-    }
+    };
     useEffect(() => {
         handleAllUserRegs();
     }, []);
@@ -117,24 +124,25 @@ export const AuthProvider = ({ children }) => {
                 // This request automatically sends the 'jwt' cookie if it exists
                 const res = await checkAuthStatus();
                 if (res.data.status === "success") {
-                    console.log("login success")
+                    console.log("login success");
                     setUser(res.data.data.user);
-                    showNotification(`Welcome, ${res.data.data.user.name}`, 'success')
+                    showNotification(`Welcome, ${res.data.data.user.name}`, "success");
                 } else {
-                    showNotification(`Error occured while logging in the user.`, 'error')
+                    showNotification(`Error occured while logging in the user.`, "error");
                 }
             } catch (err) {
+                console.log(err)
                 setUser(null);
-                showNotification(`${err.response.data.message}`, 'error')
+                showNotification(`${err.response.data.message}`, "warning");
             } finally {
                 setUserLoad(false);
             }
         };
-        
+
         // need to umcomment this for google login
         initAuth();
-        console.log("What we set as user:")
-        console.log(user)
+        console.log("What we set as user:");
+        console.log(user);
     }, []);
 
     const handleLoginSuccess = async (response) => {
@@ -144,7 +152,7 @@ export const AuthProvider = ({ children }) => {
             setUser(res.data.data.user);
             showNotification("Login successful!", "success");
         } catch (err) {
-            console.log("Login Failed on Backend:", err.response?.data || err.message);
+            console.log("Login Failed on Backend:", err.response?.data?.message || err.message);
             showNotification("Login failed. Please try again.", "error");
         } finally {
             setUserLoad(false);
@@ -157,10 +165,11 @@ export const AuthProvider = ({ children }) => {
             googleLogout();
             setUser(null);
             localStorage.removeItem("session");
+            // Clear the header from your axios instance
             showNotification("Logged out successfully", "success");
         } catch (err) {
             console.error("Logout failed:", err);
-            showNotification(`Logout failed: ${err.message}`, "error");
+            showNotification(`Logout failed: ${err.response?.data?.message}`, "error");
         }
     };
 
@@ -180,7 +189,7 @@ export const AuthProvider = ({ children }) => {
                 showNotification,
                 allEventsByDay,
                 userRegs,
-                handleAllUserRegs
+                handleAllUserRegs,
             }}
         >
             <Notification />

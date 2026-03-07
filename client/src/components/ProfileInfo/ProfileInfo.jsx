@@ -52,6 +52,7 @@ const ProfileDashboard = () => {
     const [severity, setSeverity] = useState("info");
     const [messageTitle, setMessageTitle] = useState("");
     const [loading, setLoading] = useState(false);
+    const [changes, setChanges] = useState(false)
 
     const [userData, setUserData] = useState({
         name: "",
@@ -60,6 +61,7 @@ const ProfileDashboard = () => {
         college: "",
         dept: "",
         passout_year: "",
+        id: ""
     });
 
     const navigate = useNavigate();
@@ -80,6 +82,8 @@ const ProfileDashboard = () => {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
+        if (user[name] !== value) setChanges(true)
+        else setChanges(false)
         // Phone number restriction logic
         if (name === "phone" && !/^\d{0,10}$/.test(value)) return;
         setUserData((prev) => ({ ...prev, [name]: value }));
@@ -90,19 +94,20 @@ const ProfileDashboard = () => {
         try {
             // Filter only changed fields to send to API
             const updatePayload = {name: user.name, email: user.email};
-            let hasChanges = false;
 
             Object.keys(userData).forEach((key) => {
                 if (userData[key] !== user[key]) {
                     updatePayload[key] = userData[key];
-                    hasChanges = true;
+                    console.log("changes: ", key, userData[key], user[key])
+                    setChanges(true)
                 }
             });
 
-            if (!hasChanges) {
+            if (!changes) {
                 showToast("No Changes Found", "No modifications were detected.", "warning");
                 return;
             }
+            console.log("changes: ", changes)
 
             // Call the renamed API
             const upd = await updateUser(updatePayload);
@@ -238,7 +243,7 @@ const ProfileDashboard = () => {
                             onClick={() => setDopen(true)}
                             loading={loading}
                             endIcon={<Save />}
-                            disabled={userData.phone.length !== 10 || !userData.name}
+                            disabled={userData.phone.length !== 10 || !userData.name || !changes}
                         >
                             Save Changes
                         </Button>

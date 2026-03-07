@@ -283,6 +283,7 @@ export default function EventRegister() {
                         <Stack spacing={2} sx={{ mt: 2 }}>
                             <TextField fullWidth label="Your Name" value={user?.name || "User"} disabled />
                             <TextField fullWidth label="Registered Email" value={user?.email || ""} disabled />
+                            <TextField fullWidth label="Contact details" value={user?.phone || ""} disabled />
                             <Typography variant="caption" color="text.secondary">
                                 * To change these, please go to{" "}
                                 <Link

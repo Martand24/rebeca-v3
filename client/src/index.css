@@ -1,97 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Kaushan+Script&family=Vina+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Kaushan+Script&family=Vina+Sans&display=swap");
 :root {
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-	/* font-size: 30px; */
-	/* line-height: 1.5; */
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    /* font-size: 30px; */
+    /* line-height: 1.5; */
 
-	color-scheme: light dark;
+    color-scheme: light dark;
 
-	--accent1: #ff3593;
-	--accent2: rgb(126, 52, 255);
+    --accent1: #ff3593;
+    --accent2: rgb(126, 52, 255);
 
-	--primary: var(--accent1);
-	--app-background: #000;
+    --primary: var(--accent1);
+    --app-background: #000;
 
-	--body-font: 'Andika', serif;
-	--display-font: 'Kaushan Script', cursive;
-	--heading-font: 'Vina Sans', sans-serif;
+    --body-font: "Andika", serif;
+    --display-font: "Kaushan Script", cursive;
+    --heading-font: "Vina Sans", sans-serif;
 
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	outline: none !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none !important;
 }
-*, *::after, *::before {
-	margin: 0;
-	padding: 0;
-	outline: none;
-	border: none;
-	box-sizing: border-box;
-	/* letter-spacing: 0.1em; */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    /* letter-spacing: 0.1em; */
 }
 
 .display-font {
-	font-weight: 400;
-	font-style: normal;
-	color: white;
-	font-size: 3.5rem;
-	font-family: inherit;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 3.5rem;
+    font-family: inherit;
+}
+
+.L5Fo6c-PQbLGe {
+    background-color: #000 !important;
 }
 
 a {
-	font-weight: 500;
-	color: var(--accent2);
-	text-decoration: inherit;
+    font-weight: 500;
+    color: var(--accent2);
+    text-decoration: inherit;
 }
 a:hover {
-	color: var(--accent2);
+    color: var(--accent2);
 }
 
 body {
-	margin: 0;
-	display: flex;
-	justify-content: center;
-	min-width: 320px;
-	min-height: 100vh;
-	/* background-color: var(--app-background) ; */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    min-width: 320px;
+    min-height: 100vh;
+    /* background-color: var(--app-background) ; */
 }
 
 h1 {
-	font-size: 3.2em;
-	line-height: 1.1;
+    font-size: 3.2em;
+    line-height: 1.1;
 }
 
-
 ::-webkit-scrollbar {
-  /* height: 7px !important; */
-  border-radius: 20px !important;
-  overflow: hidden;
-  width: 5px;
-  height: 90%;
-  padding: 1rem;
+    /* height: 7px !important; */
+    border-radius: 20px !important;
+    overflow: hidden;
+    width: 5px;
+    height: 90%;
+    padding: 1rem;
+}
+
+.MuiAlert-root {
+    color: #fff !important;
 }
 
 ::-webkit-scrollbar-track {
-  /* height: 5px !important; */
-  padding: 1rem;
+    /* height: 5px !important; */
+    padding: 1rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  /* height: 5px !important; */
-  border-radius: 10px;
-  background: var(--accent2);
-  transition: 0.5s all;
+    /* height: 5px !important; */
+    border-radius: 10px;
+    background: var(--accent2);
+    transition: 0.5s all;
 }
-::-webkit-scrollbar-thumb:hover{
-	background: var(--accent2);
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent2);
 }
 /* ::-webkit-scrollbar-button,
 ::-webkit-scrollbar-corner {
@@ -99,28 +107,27 @@ h1 {
 } */
 
 @media (prefers-color-scheme: light) {
-	/* :root {
+    /* :root {
 		color: #ffffff;
 	} */
-	/* a:hover {
+    /* a:hover {
 		color: #747bff;
 	}*/
-	button {
-		color: #f9f9f9;
-	}
+    button {
+        color: #f9f9f9;
+    }
 }
-@media only screen and (max-width: 1100px),
-	only screen and (max-device-width: 1100px) {
-	.display-font {
-		font-size: 30px;
-	}
+@media only screen and (max-width: 1100px), only screen and (max-device-width: 1100px) {
+    .display-font {
+        font-size: 30px;
+    }
 }
 
-@keyframes fadeIn{
-	from{
-	  opacity: 0;
-	}
-	to{
-	  opacity: 1;
-	}
-  }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
