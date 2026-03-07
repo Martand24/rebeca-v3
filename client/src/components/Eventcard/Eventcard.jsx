@@ -30,7 +30,7 @@ const Eventpanel = ({ value, index, day, show, handle }) => {
                         </div>
                     </Tooltip>
                 )}
-                <div className="img">{/* <img src="/assets/imgs/Schedule/images.png" alt="event-icon" /> */}</div>
+                <div className="img"><img src="/assets/imgs/tempo-thumb.webp" alt="event-icon" /></div>
                 {show && (
                     <div className="desc">
                         {value?.desc}

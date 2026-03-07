@@ -78,7 +78,8 @@ const EventSingle = () => {
                         position: `relative`,
                         width: `100%`,
                         minHeight: `300px`,
-                        background: `url("${oneEvent?.thumbnail}") no-repeat`,
+                        // background: `url("${oneEvent?.thumbnail}") no-repeat`,
+                        background: `url("/assets/imgs/tempo-thumb.webp") no-repeat`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                     }}
