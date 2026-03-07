@@ -171,7 +171,7 @@
   }
 
   .event-card-container {
-    width: min(100%, 30rem);
+    width: min(100%, 800px);
   }
 
   .event-card .event-data {
