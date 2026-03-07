@@ -66,7 +66,7 @@ const Footer2 = () => {
                             </div>
                         </div>
                         <div className="contact">
-                            <div className="name">Aniket Chandramohan Nimje</div>
+                            <div className="name">Aniket C. Nimje</div>
 
                             <div className="ph-num" style={{whiteSpace: "nowrap"}}>
                                 <span className="material-icons">phone</span>+91-86687-98948

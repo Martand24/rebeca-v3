@@ -5,8 +5,8 @@
     "slug": "inaugration",
     "type": "performance",
     "registration": "https://example.com/register",
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-19T17:00:00",
@@ -28,11 +28,11 @@
     "desc": "dance performance by reflexobeta",
     "slug": "reflexobeta-performance",
     "type": "performance",
-    "minTeamSize": 1,
-    "maxTeamSize": 4,
+    "minTeamSize": 0,
+    "maxTeamSize": 0,
     "registration": "https://example.com/register",
-    "regfee": 500,
-    "poster": "/assets/imgs/poster-backdrop.webp",
+    "regfee": 0,
+    "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
@@ -55,11 +55,11 @@
     "desc": "Music performance by euphony",
     "slug": "euphony-performance",
     "type": "performance",
-    "minTeamSize": 1,
-    "maxTeamSize": 4,
+    "minTeamSize": 0,
+    "maxTeamSize": 0,
     "registration": "https://example.com/register",
-    "regfee": 500,
-    "poster": "/assets/imgs/poster-backdrop.webp",
+    "regfee": 0,
+    "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
@@ -82,12 +82,12 @@
     "desc": "outside artist performance",
     "slug": "classical-artist1",
     "type": "performance",
-    "minTeamSize": 1,
-    "maxTeamSize": 4,
+    "minTeamSize": 0,
+    "maxTeamSize": 0,
     "registration": "https://example.com/register",
-    "regfee": 500,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 0,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-19T21:30:00",
@@ -106,15 +106,15 @@
   },
   {
     "name": "College Artist",
-    "desc": "performance by college students",
+    "desc": "performance by a band",
     "slug": "college-artist1",
     "type": "performance",
     "minTeamSize": 1,
     "maxTeamSize": 4,
     "registration": "https://example.com/register",
     "regfee": 500,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-19T23:00:00",
@@ -122,7 +122,7 @@
       {
         "no": 1,
         "name": "College Artist",
-        "desc": "performance by college students",
+        "desc": "performance by a band",
         "start": "Day 1 23:00",
         "end": "Day 1 00:00",
         "venue": "Main Stage"
@@ -135,13 +135,13 @@
     "name": "Film Fiesta (Movie Screening)",
     "desc": "A movie will be screened in the night at the lords ground",
     "slug": "film-fiesta",
+    "type": "performance",
     "registration": "https://example.com/register",
     "regfee": 200,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
-    "type": "performance",
     "startTime": "2026-03-19T01:00:00",
     "rounds": [
       {
@@ -156,27 +156,27 @@
     "coords": [
       {
         "name": "Mittapally Sairaj",
-        "email": "coord1@example.com",
+        "email": "swachchho333@gmail.com",
         "phone": "9949722522"
       },
       {
         "name": "Swachchhotoya Aich",
-        "email": "",
+        "email": "swachchho333@gmail.com",
         "phone": "8420663581"
       }
     ]
   },
   {
     "name": "Flying Solo",
-    "desc": "A solo music competition divided into Vocal and Instrumental categories, featuring online preliminaries and live stage finals.",
+    "desc": "Solo musical competition. There are two categories- vocal and instrumental. Participants can have one entry per category only. Refer to rulebook for judging criteria and subsequent rounds.",
     "slug": "flying-solo",
     "type": "single",
     "minTeamSize": 1,
     "maxTeamSize": 1,
     "registration": "https://example.com/register",
-    "regfee": 300,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee":99 ,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-20T10:00:00",
@@ -192,41 +192,38 @@
     ],
     "coords": [
       {
-        "name": "Shivam Yadav",
-        "email": "",
-        "phone": "+91 6306768029"
+        "name": "Satyam Kumar",
+        "email": "2024csb070.satyam@students.iiests.ac.in",
+        "phone": "+91 92636 27940"
       },
       {
         "name": "Anurag Panja",
-        "email": "",
+        "email": "2024eeb056.anurag@students.iiests.ac.in",
         "phone": "+91 62960 29979"
       }
     ],
     "prizemoney": {
-      "first": 0,
-      "second": 0,
-      "third": 0
     }
   },
   {
     "name": "Oxford Style DEBATE",
-    "desc": "A formal debate competition where two teams of two debaters each (Proposition and Opposition) argue a motion through opening statements and rebuttals.",
+    "desc": "An Oxford Style Debate will be conducted. There will be two teams comprising the motion. One team Proposes the motion , the other team opposes it . The Proposition Team will get total 4 minutes in Opening Speech portion ( 2mins per member) followed by the rebuttal. The same process applies for the Opposition Team . In 1st round , total 12 teams will be made to participate ( max 20 )  , then in the finals 6 teams will qualify out of whom winners will be decided.",
     "slug": "debate",
-    "type": "single",
+    "type": "team",
     "minTeamSize": 1,
-    "maxTeamSize": 1,
+    "maxTeamSize": 2,
     "registration": "https://example.com/register",
-    "regfee": 200,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 150,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-20T11:00:00",
     "rounds": [
       {
         "no": 1,
-        "name": "Oxford Style DEBATE",
-        "desc": "A formal debate competition where two teams of two debaters each (Proposition and Opposition) argue a motion through opening statements and rebuttals.",
+        "name": "Prelims Round",
+        "desc": "The Prelims Round will Consist of 12 Teams ( 6 Proposition- Opposition Pairs ) or ( Max 20 Teams - 10 from Proposition 10 from Opposition ) . Now 4 mins will be alloted to each team ( 2min/member) followed by the Rebuttal ( 2min ) in total . Then on basis of performance evaluation , total 6 Teams will be qualified to The Finals .",
         "start": "Day 2 11:00",
         "end": "Day 2 17:00",
         "venue": "SNT"
@@ -252,15 +249,15 @@
   },
   {
     "name": "Dumb Charades",
-    "desc": "A knockout-style game for teams, they must guess movie or TV series names from chits within a time limit.",
+    "desc": "Small event about the good old dumb charades, where one person reenacts something, and the others try to guess what it is.",
     "slug": "dumb-charades",
     "type": "team",
-    "minTeamSize": 2,
-    "maxTeamSize": 4,
+    "minTeamSize": 3,
+    "maxTeamSize": 5,
     "registration": "https://example.com/register",
-    "regfee": 150,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 0,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-20T14:00:00",
@@ -271,7 +268,7 @@
         "desc": "A knockout-style game for teams, they must guess movie or TV series names from chits within a time limit.",
         "start": "Day 2 14:00",
         "end": "Day 2 16:00",
-        "venue": "Gallery 3"
+        "venue": "Gallery 3 AE and AM"
       },
       {
         "no": 2,
@@ -279,7 +276,7 @@
         "desc": "A knockout-style game for teams, they must guess movie or TV series names from chits within a time limit.",
         "start": "Day 3 15:00",
         "end": "Day 3 17:00",
-        "venue": "Gallery 3"
+        "venue": "Gallery 3 AE and AM"
       }
     ],
     "coords": [
@@ -295,22 +292,19 @@
       }
     ],
     "prizemoney": {
-      "first": 5000,
-      "second": 2500,
-      "third": 1000
     }
   },
   {
     "name": "Mono Act",
-    "desc": " A solo acting competition where participants perform an original or adapted act of under 3 minutes in Hindi, Bengali, or English.",
+    "desc": " A solo performance event where a single participant brings a story or character to life through expressive acting and powerful dialogue. With just expression, voice, and presence, a single actor holds the audience spellbound and turns a simple act into a powerful story.",
     "slug": "mono-act",
     "type": "single",
     "minTeamSize": 1,
     "maxTeamSize": 1,
     "registration": "https://example.com/register",
-    "regfee": 150,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 100,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-20T16:00:00",
@@ -337,9 +331,6 @@
       }
     ],
     "prizemoney": {
-      "first": 5000,
-      "second": 2500,
-      "third": 1000
     }
   },
   {
@@ -350,9 +341,9 @@
     "minTeamSize": 1,
     "maxTeamSize": 1,
     "registration": "https://example.com/register",
-    "regfee": 150,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 0,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-20T18:00:00",
@@ -367,7 +358,7 @@
       },
       {
         "no": 2,
-        "name": "RXB",
+        "name": "RXB - Architecure",
         "desc": "dance performance by reflexobeta",
         "start": "Day 2 20:30",
         "end": "Day 2 21:30",
@@ -385,9 +376,9 @@
     "minTeamSize": 1,
     "maxTeamSize": 1,
     "registration": "https://example.com/register",
-    "regfee": 150,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 0,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-20T21:30:00",
@@ -403,9 +394,6 @@
     ],
     "coords": [],
     "prizemoney": {
-      "first": 5000,
-      "second": 2500,
-      "third": 1000
     }
   },
   {
@@ -414,9 +402,9 @@
     "slug": "artist-band-performance2",
     "type": "performance",
     "registration": "https://example.com/register",
-    "regfee": 150,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 0,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-20T22:30:00",
@@ -438,9 +426,9 @@
     "slug": "Alum-band-performance2",
     "type": "performance",
     "registration": "https://example.com/register",
-    "regfee": 150,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 0,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-20T00:00:00",
@@ -462,9 +450,9 @@
     "slug": "dj-night2",
     "type": "performance",
     "registration": "https://example.com/register",
-    "regfee": 150,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 0,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-20T01:00:00",
@@ -488,9 +476,9 @@
     "minTeamSize": 1,
     "maxTeamSize": 1,
     "registration": "https://example.com/register",
-    "regfee": 150,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 0,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-21T10:00:00",
@@ -509,15 +497,15 @@
   },
   {
     "name": "Rang Manch",
-    "desc": "A theatrical showcase featuring two plays (one in Hindi and one in Bengali).",
+"desc": "The lights hum softly. A hush settles in. A voice rises — and suddenly, the world shifts. A room becomes a courtroom. A garden becomes a battlefield of dreams. Emotions thicken, tensions rise, and the ordinary dissolves into something extraordinary.\n\nThis is Rangmanch — the heartbeat of theatre by LES THESPIANS, where stories aren’t just performed, they are lived. A celebration of bold storytelling and powerful expression, this year it brings two compelling worlds to life — one in Hindi and one in Bengali — each ready to move and mesmerize.\n\nThe Two Acts :\n\nKhamosh Adalat Jari Hai\nFrom the bold imagination of Vijay Tendulkar, what begins as a light-hearted courtroom game slowly tightens into something far more unsettling. Smiles fade, questions sharpen, and the air grows heavy — leaving you to wonder who is really on trial.\n\nSajano Bagan\nWritten by the acclaimed Manoj Mitra, this moving drama unveils fragile dreams and unspoken desires, revealing how carefully arranged lives can conceal deep emotional storms.",
     "slug": "rang-manch",
     "type": "performance",
     "minTeamSize": 1,
     "maxTeamSize": 1,
     "registration": "https://example.com/register",
     "regfee": 150,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-21T14:00:00",
@@ -528,7 +516,7 @@
         "desc": "A theatrical showcase featuring two plays (one in Hindi and one in Bengali).",
         "start": "Day 3 14:00",
         "end": "Day 3 18:00",
-        "venue": "I-HALL"
+        "venue": "Institute HALL"
       }
     ],
     "coords": [
@@ -544,59 +532,6 @@
       }
     ],
     "prizemoney": {
-      "first": 5000,
-      "second": 2500,
-      "third": 1000
-    }
-  },
-  {
-    "name": "Dumb Charades",
-    "desc": "A knockout-style game for teams, they must guess movie or TV series names from chits within a time limit.",
-    "slug": "dumb-charades",
-    "type": "team",
-    "minTeamSize": 2,
-    "maxTeamSize": 4,
-    "registration": "https://example.com/register",
-    "regfee": 150,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
-    "thumbnail": "https://placehold.co/150x150.jpg",
-    "asset": "",
-    "startTime": "2026-03-21T14:00:00",
-    "rounds": [
-      {
-        "no": 1,
-        "name": "Dumb Charades",
-        "desc": "A knockout-style game for teams, they must guess movie or TV series names from chits within a time limit.",
-        "start": "Day 2 14:00",
-        "end": "Day 2 16:00",
-        "venue": "Gallery 3"
-      },
-      {
-        "no": 2,
-        "name": "Dumb Charades",
-        "desc": "A knockout-style game for teams, they must guess movie or TV series names from chits within a time limit.",
-        "start": "Day 3 15:00",
-        "end": "Day 3 17:00",
-        "venue": "Gallery 3"
-      }
-    ],
-    "coords": [
-      {
-        "name": "Aritra Dutta",
-        "email": "",
-        "phone": "+91 78659 79275"
-      },
-      {
-        "name": "Swastika Ghosh",
-        "email": "",
-        "phone": "+91 86498 09402"
-      }
-    ],
-    "prizemoney": {
-      "first": 5000,
-      "second": 2500,
-      "third": 1000
     }
   },
   {
@@ -607,9 +542,9 @@
     "minTeamSize": 4,
     "maxTeamSize": 8,
     "registration": "https://example.com/register",
-    "regfee": 400,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 300,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-21T16:00:00",
@@ -636,51 +571,53 @@
       }
     ],
     "prizemoney": {
-      "first": 12000,
-      "second": 6000,
-      "third": 3000
     }
   },
   {
     "name": "Rockbuzz",
-    "desc": " A band competition for groups of 3 to 8 members, involving an online video submission prelim and a live stage performance for the top 10 finalists.",
+    "desc": " It is a band competition where participating bands have to showcase their performances in the preliminary round by submission of their entry through the website. Bands who qualify will get to perform on the live stage of REBECA 85 for the Finals Round.",
     "slug": "rockbuzz",
-    "type": "performance",
-    "minTeamSize": 1,
-    "maxTeamSize": 1,
+    "type": "team",
+    "minTeamSize": 3,
+    "maxTeamSize": 8,
     "registration": "https://example.com/register",
-    "regfee": 150,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 699,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-21T18:00:00",
     "rounds": [
       {
         "no": 1,
-        "name": "Rockbuzz",
-        "desc": " A band competition for groups of 3 to 8 members, involving an online video submission prelim and a live stage performance for the top 10 finalists.",
+        "name": " Preliminary Round. ",
+        "desc": "The bands will register and submit their entries through the website. Only one entry per band is allowed.",
         "start": "Day 3 18:00",
         "end": "Day 3 20:00",
-        "venue": "Main Stage"
+        "venue": "Online"
+      },
+      {
+        "no": 2,
+        "name": "Final Round. ",
+        "desc": "The bands who qualify the Preliminary Round will be invited to perform live on the stage of REBECA 85 on Day 3 Kolkata Night between 18:00 to 22:00 for the Finals Round. " ,
+        "start": "Day 3 18:00",
+        "end": "Day 3 20:00",
+        "venue": "Online"
       }
     ],
     "coords": [
       {
-        "name": "Aritra Dutta",
+        "name": "Aditi Modal",
         "email": "",
-        "phone": "+91 78659 79275"
+        "phone": "+91 8017793546"
       },
       {
-        "name": "Swastika Ghosh",
+        "name": "Farhan Talukdar",
         "email": "",
-        "phone": "+91 86498 09402"
+        "phone": "+91 7384928393"
       }
     ],
     "prizemoney": {
-      "first": 5000,
-      "second": 2500,
-      "third": 1000
     }
   },
   {
@@ -691,9 +628,9 @@
     "minTeamSize": 1,
     "maxTeamSize": 1,
     "registration": "https://example.com/register",
-    "regfee": 150,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 0,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-21T20:00:00",
@@ -708,21 +645,8 @@
       }
     ],
     "coords": [
-      {
-        "name": "Aritra Dutta",
-        "email": "",
-        "phone": "+91 78659 79275"
-      },
-      {
-        "name": "Swastika Ghosh",
-        "email": "",
-        "phone": "+91 86498 09402"
-      }
     ],
     "prizemoney": {
-      "first": 5000,
-      "second": 2500,
-      "third": 1000
     }
   },
   {
@@ -732,8 +656,8 @@
     "type": "performance",
     "registration": "https://example.com/register",
     "regfee": 0,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-21T22:00:00",
@@ -748,16 +672,6 @@
       }
     ],
     "coords": [
-      {
-        "name": "Aritra Dutta",
-        "email": "",
-        "phone": "+91 78659 79275"
-      },
-      {
-        "name": "Swastika Ghosh",
-        "email": "",
-        "phone": "+91 86498 09402"
-      }
     ],
     "prizemoney": {}
   },
@@ -768,8 +682,8 @@
     "type": "performance",
     "registration": "https://example.com/register",
     "regfee": 0,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-21T00:00:00",
@@ -784,30 +698,67 @@
       }
     ],
     "coords": [
-      {
-        "name": "Aritra Dutta",
-        "email": "",
-        "phone": "+91 78659 79275"
-      },
-      {
-        "name": "Swastika Ghosh",
-        "email": "",
-        "phone": "+91 86498 09402"
-      }
     ],
     "prizemoney": {}
   },
   {
-    "name": "Solo Synergy + Sync Showcase",
-    "desc": "SA solo dance competition and group dance competition open to all classical and folk dance forms.",
-    "slug": "solo-synergy-sync-showcase",
+    "name": "Solo Synergy ",
+    "desc": "Solo dance competition open to all classical and folk dance forms.",
+    "slug": "solo-synergy",
     "type": "single",
     "minTeamSize": 1,
     "maxTeamSize": 1,
     "registration": "https://example.com/register",
-    "regfee": 400,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 100,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
+    "thumbnail": "https://placehold.co/150x150.jpg",
+    "asset": "",
+    "startTime": "2026-03-22T11:00:00",
+    "rounds": [
+      {
+        "no": 1,
+        "name": "Video Submission",
+        "desc": "video : landscape mode, with clear audio, uncluttered background \nTime Limit: 2 minutes \nVenue: no Venue\nSubmission: Upload video to Google Drive with general access, link to be provided in registration form, official website",
+        "start": "Day 4 11:00",
+        "end": "Day 4 14:00",
+        "venue": "Online"
+      },
+      {
+        "no": 2,
+        "name": "Finals",
+        "desc": "Time Limit: 6 minutes",
+        "start": "Day 4 11:00",
+        "end": "Day 4 14:00",
+        "venue": "I-HALL"
+      }
+    ],
+    "coords": [
+      {
+        "name": "Manisha Singh",
+        "email": "",
+        "phone": "95089 01220"
+      },
+      {
+        "name": "Anusha Gupta",
+        "email": "",
+        "phone": "734 888 9994"
+      }
+    ],
+    "prizemoney": {
+    }
+  },
+  {
+    "name": "Sync Showcase",
+    "desc": "Group dance competition open to all classical and folk dance forms.",
+    "slug": "sync-showcase",
+    "type": "team",
+    "minTeamSize": 5,
+    "maxTeamSize":20,
+    "registration": "https://example.com/register",
+    "regfee": 200,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-22T11:00:00",
@@ -834,22 +785,19 @@
       }
     ],
     "prizemoney": {
-      "first": 10000,
-      "second": 5000,
-      "third": 2500
     }
   },
   {
     "name": "Verse Wars",
-    "desc": "A poetry competition where participants recite their original poems in English, Bangla, or Hindi.",
+    "desc": "A poetry slam for you to take your rhyme to the next level. Use your verses, your voice and let the crowd lose themselves to the power of your words.",
     "slug": "verse-wars",
     "type": "team",
-    "minTeamSize": 2,
-    "maxTeamSize": 6,
+    "minTeamSize": 1,
+    "maxTeamSize": 3,
     "registration": "https://example.com/register",
-    "regfee": 400,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 50,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-22T14:00:00",
@@ -857,7 +805,7 @@
       {
         "no": 1,
         "name": "Verse Wars",
-        "desc": "A poetry competition where participants recite their original poems in English, Bangla, or Hindi.",
+        "desc": "The Event consists of a single round in which participants have to recite their original literary work either from memory or from page in any style of their choice in English, Hindi or Bangla. The Event will be held at Institute Hall on Day 4 (22.03.2026) from 14:00 to 16:00 hours.",
         "start": "Day 4 14:00",
         "end": "Day 4 16:00",
         "venue": "I-HALL"
@@ -875,11 +823,7 @@
         "phone": "+91 87773 28225"
       }
     ],
-    "prizemoney": {
-      "first": 10000,
-      "second": 5000,
-      "third": 2500
-    }
+    "prizemoney": {}
   },
   {
     "name": "Rebequiz",
@@ -889,9 +833,9 @@
     "minTeamSize": 1,
     "maxTeamSize": 3,
     "registration": "https://example.com/register",
-    "regfee": 200,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 100,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-22T14:00:00",
@@ -917,50 +861,19 @@
         "phone": "+91 78722 27322"
       }
     ],
-    "prizemoney": {
-      "first": 6000,
-      "second": 3000,
-      "third": 1500
-    }
-  },
-  {
-    "name": "Nukkad Natak",
-    "desc": "A street play or street theather based on a theme, to be performed by Les Thespian.",
-    "slug": "nukkad-natak",
-    "type": "performance",
-    "minTeamSize": 1,
-    "maxTeamSize": 1,
-    "registration": "https://example.com/register",
-    "regfee": 0,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
-    "thumbnail": "https://placehold.co/150x150.jpg",
-    "asset": "",
-    "startTime": "2026-03-22T16:30:00",
-    "rounds": [
-      {
-        "no": 1,
-        "name": "Nukkad Natak",
-        "desc": "A street play or street theather based on a theme, to be performed by Les Thespian.",
-        "start": "Day 4 16:30",
-        "end": "Day 4 17:30",
-        "venue": "Netaji Bhavan"
-      }
-    ],
-    "coords": [],
     "prizemoney": {}
   },
   {
     "name": "Fiducia",
-    "desc": "Step into the spotlight, own the runway, and let your style do the talking in Fiducia, a glamorous ramp walk and fashion showdown.",
+    "desc": "Fiducia is a dynamic theme-based fashion show that celebrates confidence, style, and individuality. Participants take the stage to present their walk, expressions, and personality, turning fashion into a powerful form of self-expression.",
     "slug": "fiducia",
     "type": "performance",
     "minTeamSize": 1,
     "maxTeamSize": 1,
     "registration": "https://example.com/register",
-    "regfee": 150,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "regfee": 0,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-22T18:00:00",
@@ -974,7 +887,16 @@
         "venue": "Main Stage"
       }
     ],
-    "coords": [],
+    "coords": [{
+        "name": "Sanskriti Ray ",
+        "email": "",
+        "phone": "9641820932"
+      },
+      {
+        "name": "Shruti kumari",
+        "email": "",
+        "phone": "8235066688"
+      }],
     "prizemoney": {}
   },
   {
@@ -986,8 +908,8 @@
     "maxTeamSize": 1,
     "registration": "https://example.com/register",
     "regfee": 0,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-22T20:00:00",
@@ -1013,8 +935,8 @@
     "maxTeamSize": 1,
     "registration": "https://example.com/register",
     "regfee": 0,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-22T21:00:00",
@@ -1040,8 +962,8 @@
     "maxTeamSize": 1,
     "registration": "https://example.com/register",
     "regfee": 0,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-22T22:30:00",
@@ -1065,8 +987,8 @@
     "type": "performance",
     "registration": "https://example.com/register",
     "regfee": 0,
-    "poster": "/assets/imgs/poster-backdrop.webp",
-    "rulesdoc": "https://placehold.co/600x400.jpg",
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-22T00:30:00",
@@ -1082,5 +1004,401 @@
     ],
     "coords": [],
     "prizemoney": {}
-  }
+  },
+  {
+    "name": "Pixel Poetry",
+    "desc": "Pixel Poetry is a photography competition that celebrates creativity through the lens. Participants will capture powerful moments based on a given theme and showcase their storytelling through photographs. The event challenges photographers to blend art, perspective, and emotion into a single frame. 📸✨",
+    "slug": "pixel-poetry",
+    "type": "single",
+    "minTeamSize": 1,
+    "maxTeamSize": 1,
+    "registration": "https://example.com/register",
+    "regfee": 75,
+    "poster": "https://placehold.co/600x400.jpg",
+    "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
+    "thumbnail": "https://placehold.co/150x150.jpg",
+    "asset": "",
+    "startTime": "2026-03-10T14:00:00",
+    "rounds": [
+      {
+        "no": 1,
+        "name": "Online Submission",
+        "desc": "o Participants must submit their best photograph based on the given theme.\no Submission deadline 17th March ,2026 .\no Entries will be judged based on creativity, composition, and adherence to theme.",
+        "start": "Started",
+        "end": "17 March  16:00",
+        "venue": "Online"
+      },
+      {
+        "no": 2,
+        "name": "Finals",
+        "desc": "o Selected participants from Round 1 will compete in an on-campus photography challenge.\no A theme will be given on the spot, and participants will have a set time limit to capture and submit their photos. \no Editing will be allowed only within the permitted software/tools.",
+        "start": "17 March ",
+        "end": "17 March",
+        "venue": "IIEST Shibpur"
+      }
+    ],
+    "coords": [
+      {
+        "name": "Anshika",
+        "email": "",
+        "phone": "6388451765"
+      },
+      {
+        "name": "Aman Daulat Wankhede ",
+        "email": "",
+        "phone": "7448171318"
+      }
+    ],
+    "prizemoney": {}
+  },
+  {
+  "name": "Rebecsal",
+  "desc": "7-side Football Knockout Tournament.",
+  "slug": "football-club",
+  "type": "team",
+  "minTeamSize": 7,
+  "maxTeamSize": 10,
+  "registration": "https://example.com/register",
+  "regfee": 400,
+  "poster": "https://placehold.co/600x400.jpg",
+  "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
+  "thumbnail": "https://placehold.co/150x150.jpg",
+  "asset": "",
+  "startTime": "2026-03-19T16:00:00",
+  "rounds": [
+    {
+      "no": 1,
+      "name": "Rebecsal",
+      "desc": "7-side football knockout match as per tournament bracket. Other information attached in the rulebook.",
+      "start": "4:00 PM",
+      "end": "",
+      "venue": "The Oval"
+    }
+  ],
+  "coords": [
+    {
+      "name": "Ansh Pradhan",
+      "email": "2023ceb084.ansh@students.iiests.ac.in",
+      "phone": "9827482977"
+    },
+    {
+      "name": "Sayan Paul",
+      "email": "2023mmb010.sayan@students.iiests.ac.in",
+      "phone": "7003495654"
+    }
+  ],
+  "prizemoney": {}
+},
+{
+  "name": "Reel on Rebeca",
+  "desc": "Camerabuff, the Film Society of IIEST Shibpur, presents the “Reel on REBECA” competition as part of REBECA 2026. This event invites students to showcase their creativity through short-form reel videos. Capture the energy, emotions, and unforgettable moments of REBECA. Highlight performances, behind-the-scenes fun, and the vibrant fest spirit. Turn your vision into a cinematic story and let your lens speak. 🎬✨",
+  "slug": "reel-on-rebeca",
+  "type": "team",
+  "minTeamSize": 1,
+  "maxTeamSize": 3,
+  "registration": "https://example.com/register",
+  "regfee": 150,
+  "poster": "https://placehold.co/600x400.jpg",
+  "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
+  "thumbnail": "https://placehold.co/150x150.jpg",
+  "asset": "",
+  "startTime": "2026-03-19T16:00:00",
+  "rounds": [
+    {
+      "no": 1,
+      "name": "Reel Submission",
+      "desc": "Participants must create and submit a short-form reel capturing the spirit of REBECA. The competition starts on Thursday and submissions close on Sunday.",
+      "start": "Thursday 4 PM",
+      "end": "Sunday (Submission Deadline)",
+      "venue": "Online"
+    }
+  ],
+  "coords": [
+    {
+      "name": "Eepuri Srikavya",
+      "email": "2024eeb047.eepuri@students.iiests.ac.in",
+      "phone": "9063561164"
+    },
+    {
+      "name": "Bheemarasetty Hemani",
+      "email": "2024meb042.bheemarasetty@students.iiests.ac.in",
+      "phone": "7893832251"
+    }
+  ],
+  "prizemoney": {}
+},
+{
+  "name": "Rescenic",
+  "desc": "Rescenic is a Movie Scene Recreation event organized by Camerabuff, where participants recreate iconic scenes from films with their own creative interpretation. Teams will bring cinematic moments to life through acting, direction, and presentation.",
+  "slug": "rescenic",
+  "type": "single",
+  "minTeamSize": 1,
+  "maxTeamSize": 1,
+  "registration": "https://example.com/register",
+  "regfee": 200,
+  "poster": "https://placehold.co/600x400.jpg",
+  "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
+  "thumbnail": "https://placehold.co/150x150.jpg",
+  "asset": "",
+  "startTime": "2026-03-19T18:00:00",
+  "rounds": [
+    {
+      "no": 1,
+      "name": "Movie Scene Recreation",
+      "desc": "Teams will recreate a selected movie scene and present it before the judges. Creativity, acting, and fidelity to the original scene will be considered in the evaluation.",
+      "start": "19 March 6:00 PM",
+      "end": "",
+      "venue": "IIEST Shibpur"
+    }
+  ],
+  "coords": [
+    {
+      "name": "Aykchat Kalita",
+      "email": "aykchatkalita@gmail.com",
+      "phone": "6001011665"
+    },
+    {
+      "name": "Karan Mandal",
+      "email": "mandalkaran024@gmail.com",
+      "phone": "6289021250"
+    }
+  ],
+  "prizemoney": {}
+},
+{
+  "name": "Typist Tourney",
+  "desc": "Get ready to compete in an electrifying offline keyboard typing speed test hosted on the MonkeyType platform. Race against time to achieve the fastest and most accurate typing score. Whether you’re a seasoned typist or just looking for a fun challenge, this event promises an adrenaline-fueled experience. Sharpen your reflexes, unleash your speed, and claim the title of the fastest typist!",
+  "slug": "typist-tourney",
+  "type": "single",
+  "minTeamSize": 1,
+  "maxTeamSize": 1,
+  "registration": "https://example.com/register",
+  "regfee": 0,
+  "poster": "https://placehold.co/600x400.jpg",
+  "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
+  "thumbnail": "https://placehold.co/150x150.jpg",
+  "asset": "",
+  "startTime": "2026-03-19T19:30:00",
+  "rounds": [
+    {
+      "no": 1,
+      "name": "Qualifiers",
+      "desc": "Qualifier round for Typist Tourney Finals. Participants will compete in a typing speed challenge on the MonkeyType platform.",
+      "start": "19 March 7:30 PM",
+      "end": "19 March 9:00 PM",
+      "venue": "Parade Ground Stall"
+    },
+    {
+      "no": 2,
+      "name": "Finals",
+      "desc": "Top 10 finalists from Round 1 will compete in the final typing speed challenge to determine the fastest typist.",
+      "start": "20 March 8:00 PM",
+      "end": "20 March 9:00 PM",
+      "venue": "Parade Ground Stall"
+    }
+  ],
+  "coords": [
+    {
+      "name": "Yasharth Shukla",
+      "email": "2023csb107.yasharth@students.iiests.ac.in",
+      "phone": "9161264689"
+    },
+    {
+      "name": "Vaibhav Singh",
+      "email": "2023csb050.vaibhav@students.iiests.ac.in",
+      "phone": "9458146567"
+    }
+  ],
+  "prizemoney": {}
+},
+{
+  "name": "WhatIf - Poster Re-Designing Contest",
+  "desc": "Camerabuff – The Film Society of IIEST Shibpur presents “What If” — a creative poster redesign challenge where nostalgia meets modern artistry. Reimagine any retro film (any language) with a bold, contemporary twist. Keep its soul, change the vibe, and redefine its look. Let your creativity rewrite cinematic history.",
+  "slug": "whatif-poster-redesigning-contest",
+  "type": "single",
+  "minTeamSize": 1,
+  "maxTeamSize": 1,
+  "registration": "https://example.com/register",
+  "regfee": 150,
+  "poster": "https://placehold.co/600x400.jpg",
+  "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
+  "thumbnail": "https://placehold.co/150x150.jpg",
+  "asset": "",
+  "startTime": "2026-03-19T10:00:00",
+  "rounds": [
+    {
+      "no": 1,
+      "name": "Poster Submission",
+      "desc": "Participants must register through the official REBECA website and complete the payment. The WhatsApp group link will be shared and participants will be added for further updates. Participants must redesign a poster of any retro film (any language) in a modern style while retaining its core essence. Only one original entry is allowed (AI strictly prohibited). The submission must be in JPEG/PNG format with a 4:5 ratio along with the editable design link via the provided Google Form.",
+      "start": "19 March",
+      "end": "22 March 6:00 PM",
+      "venue": "Online"
+    }
+  ],
+  "coords": [
+    {
+      "name": "Jannat Parvin",
+      "email": "jannatparvin205@gmail.com",
+      "phone": "9832184930"
+    },
+    {
+      "name": "Tarun Chowdary Yegi",
+      "email": "yegi.2992@gmail.com",
+      "phone": "8247832809"
+    }
+  ],
+  "prizemoney": {}
+},
+{
+  "name": "Photowalk",
+  "desc": "Photowalk is a casual photography activity organized by Catharsis where participants will visit a location together and capture photographs, mainly focusing on street photography. This is not a competition but an opportunity for photography enthusiasts to explore, practice, and enjoy capturing moments.",
+  "slug": "photowalk",
+  "type": "single",
+  "minTeamSize": 1,
+  "maxTeamSize": 1,
+  "registration": "https://example.com/register",
+  "regfee": 50,
+  "poster": "https://placehold.co/600x400.jpg",
+  "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
+  "thumbnail": "https://placehold.co/150x150.jpg",
+  "asset": "",
+  "startTime": "2026-03-16T06:00:00",
+  "rounds": [
+    {
+      "no": 1,
+      "name": "Photowalk",
+      "desc": "Participants will gather and visit a selected location to capture photographs, primarily focusing on street photography. This is not a competitive event.",
+      "start": "16 March 6:00 AM",
+      "end": "",
+      "venue": "To Be Announced"
+    }
+  ],
+  "coords": [
+    {
+      "name": "Soumyaditya Mandal",
+      "email": "2023meb014.soumyaditya@students.iiests.ac.in",
+      "phone": "7797754924"
+    },
+    {
+      "name": "Sandip Kumar Das",
+      "email": "2023eeb030.sandip@students.iiests.ac.in",
+      "phone": "7603898592"
+    }
+  ],
+  "prizemoney": {}
+},
+{
+  "name": "Photography Workshop",
+  "desc": "It will be a photography workshop organized by Catharsis where participants can learn photography techniques and interact with the artist. The session will focus on improving practical skills, understanding composition, and exploring creative photography approaches.",
+  "slug": "photography-workshop",
+  "type": "Performance",
+  "minTeamSize": 60,
+  "maxTeamSize": 100,
+  "registration": "https://example.com/register",
+  "regfee": 0,
+  "poster": "https://placehold.co/600x400.jpg",
+  "rulesdoc": "",
+  "thumbnail": "https://placehold.co/150x150.jpg",
+  "asset": "",
+  "startTime": "2026-03-16T16:00:00",
+  "rounds": [
+    {
+      "no": 1,
+      "name": "Workshop Session",
+      "desc": "It will be a photography workshop consisting of the audience and the artist, focusing on learning photography techniques and interaction.",
+      "start": "16 March 4:00 PM",
+      "end": "",
+      "venue": "IIEST Shibpur"
+    }
+  ],
+  "coords": [
+    {
+      "name": "Harsh Gautam",
+      "email": "2023ceb046.harsh@students.iiests.ac.in",
+      "phone": "9761312100"
+    },
+    {
+      "name": "Soumyaditya Mandal",
+      "email": "2023meb014.soumyaditya@students.iiests.ac.in",
+      "phone": "7797754924"
+    }
+  ],
+  "prizemoney": {}
+},
+{
+  "name": "Saturnalia",
+  "desc": "Saturnalia is a photography exhibition organized by Catharsis where selected photographs from participants will be showcased in a curated exhibition format. Participants can submit their best captures, and selected photographs will be printed and displayed in framed format during the exhibition.",
+  "slug": "saturnalia",
+  "type": "Performance",
+  "minTeamSize": 1,
+  "maxTeamSize": 1,
+  "registration": "https://example.com/register",
+  "regfee": 0,
+  "poster": "https://placehold.co/600x400.jpg",
+  "rulesdoc": "",
+  "thumbnail": "https://placehold.co/150x150.jpg",
+  "asset": "",
+  "startTime": "2026-03-19T10:00:00",
+  "rounds": [
+    {
+      "no": 1,
+      "name": "Photography Exhibition",
+      "desc": "Display of selected photographs in printed frames. Participants can submit their best captures for selection. Selected photographs will be printed and displayed in an exhibition format. Submission deadline: 18 March 2026.",
+      "start": "19 March",
+      "end": "22 March",
+      "venue": "IIEST Shibpur"
+    }
+  ],
+  "coords": [
+    {
+      "name": "Sandip Kumar Das",
+      "email": "2023eeb030.sandip@students.iiests.ac.in",
+      "phone": "7063898592"
+    },
+    {
+      "name": "Anamika Singh",
+      "email": "2023csb030.anamika@students.iiests.ac.in",
+      "phone": "9932692869"
+    }
+  ],
+  "prizemoney": {}
+},
+{
+  "name": "Shutter Sprint",
+  "desc": "Shutter Sprint is a photography challenge organized by Catharsis - The Photography Society of IIEST, Shibpur. Participants will receive blurred photos one by one and must guess where the photograph was taken. Teams must then go to that location, recreate the same frame from the same perspective, and submit the photo to the organizer along with a selfie of the entire group at that spot.",
+  "slug": "shutter-sprint",
+  "type": "team",
+  "minTeamSize": 2,
+  "maxTeamSize": 3,
+  "registration": "https://example.com/register",
+  "regfee": 0,
+  "poster": "https://placehold.co/600x400.jpg",
+  "rulesdoc": "https://drive.google.com/file/d/1h10BEE6DiizLzifNk57ecP6FchnyD5qM/view?usp=sharing",
+  "thumbnail": "https://placehold.co/150x150.jpg",
+  "asset": "",
+  "startTime": "2026-03-20T15:00:00",
+  "rounds": [
+    {
+      "no": 1,
+      "name": "Shutter Sprint Challenge",
+      "desc": "Participants will be given blurred photographs and must identify the location, recreate the same frame from the same perspective, and submit the photo along with a group selfie at the spot.",
+      "start": "20 March 3:00 PM",
+      "end": "20 March 6:00 PM",
+      "venue": "IIEST Shibpur Campus"
+    }
+  ],
+  "coords": [
+    {
+      "name": "Nikhil Kumar",
+      "email": "nikhil608855@gmail.com",
+      "phone": "7858010472"
+    },
+    {
+      "name": "Harsh Kamal",
+      "email": "",
+      "phone": "9875648449"
+    }
+  ],
+  "prizemoney": {}
+}
 ]
