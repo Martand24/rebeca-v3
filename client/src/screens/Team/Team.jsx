@@ -18,7 +18,7 @@ import CustomAvatar from "../../components/CustomAvatar/CustomAvatar";
 import { useAuth } from "../../AuthContext";
 import { teamIcons } from "../../AuthContext";
 import { East, Favorite } from "@mui/icons-material";
-import Heading from "../../components/Headingv2/Headingv2"
+import Heading from "../../components/Headingv2/Headingv2";
 
 const profs = [
     { name: "Dr. Sekhar Mandal", position: "Chairman", img: "./assets/imgs/Faculty/sekhar_mandal.webp" },
@@ -59,7 +59,7 @@ function ProfessorsList() {
 }
 
 const Team = () => {
-    const {allTeams} = useAuth()
+    const { allTeams } = useAuth();
 
     return (
         allTeams && (
@@ -126,7 +126,7 @@ const Team = () => {
                                             return (
                                                 <CustomAvatar
                                                     title={member.name}
-                                                    src={`/assets/imgs/team_target_images/${member.name.toLowerCase().replace(" ", "")}.webp`}
+                                                    src={`/assets/imgs/team_target_images/${member.name.toLowerCase().replaceAll(" ","")}.webp`}
                                                     // subtitle={member.tagline}
                                                     phone={member.phone}
                                                     icon={teamIcons[teamData.team]}
