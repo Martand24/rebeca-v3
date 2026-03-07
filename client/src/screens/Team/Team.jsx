@@ -126,8 +126,8 @@ const Team = () => {
                                             return (
                                                 <CustomAvatar
                                                     title={member.name}
-                                                    src={`/assets/imgs/team_target_images/${member.name.toLowerCase().replaceAll(" ","")}.webp`}
-                                                    // subtitle={member.tagline}
+                                                    src={`/assets/imgs/team_target_images/${member.name.toLowerCase().replaceAll(" ","").replaceAll(".", "")}.webp`}
+                                                    subtitle={member.position}
                                                     phone={member.phone}
                                                     icon={teamIcons[teamData.team]}
                                                     key={ki}

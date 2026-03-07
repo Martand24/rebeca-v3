@@ -12,7 +12,7 @@ const DrawingLoader = ({ onComplete }) => {
         let loadedCount = 0;
         for (let i = 1; i <= totalFrames; i++) {
             const img = new Image();
-            img.src = `/assets/video-frames/frame-${i.toString().padStart(3, "0")}.webp`;
+            img.src = `/assets/rebeca-pink-frames/ezgif-frame-${i.toString().padStart(3, "0")}.webp`;
 
             const handleLoad = () => {
                 loadedCount++;
