@@ -159,7 +159,7 @@
   color: var(--accent1);
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 5000px){
   .event-card .event-data .data-header .evname .event-badge {
     transform: rotate(0deg);
   }
@@ -171,7 +171,7 @@
   }
 
   .event-card-container {
-    width: 100%;
+    width: min(100%, 30rem);
   }
 
   .event-card .event-data {

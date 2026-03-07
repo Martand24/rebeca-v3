@@ -90,7 +90,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
-    /* justify-content: center; */
+    justify-content: center;
     /* scrollbar-width: none; */
 }
 
