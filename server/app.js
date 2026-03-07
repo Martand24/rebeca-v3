@@ -13,6 +13,7 @@ const authRouter = require("./routes/authRoutes");
 const userRouter = require("./routes/userRoutes");
 const regRouter = require("./routes/registerRoutes");
 const AppError = require("./utils/appError");
+const { getAllUserRegs } = require("./controllers/registerController");
 
 const app = express();
 
