@@ -1,110 +1,173 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
 import {
-  Container, Typography, Paper, Table, TableBody, TableCell,
-  TableContainer, TableHead, TableRow, TablePagination, CircularProgress,
-  Box, Alert, Chip, Button
-} from '@mui/material';
-import Headingv2 from '../../components/Headingv2/Headingv2';
-import { useAuth } from '../../AuthContext';
-import './MyRegistrations.css';
+    Container, Typography, Box, CircularProgress,
+    Card, CardContent, Chip, Divider, IconButton,
+    Tooltip
+} from "@mui/material";
+import RefreshIcon from "@mui/icons-material/Refresh";
+import GroupsIcon from "@mui/icons-material/Groups";
+import PersonIcon from "@mui/icons-material/Person";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { useAuth } from "../../AuthContext"; 
+import "./MyRegistrations.css";
+
+const formatEventName = (slug) => {
+    if (!slug) return "Unknown Event";
+    return slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+};
+
+const formatDate = (dateString) =>
+    new Date(dateString).toLocaleDateString("en-IN", {
+        day: "2-digit", month: "short", year: "numeric",
+    });
+
+const RegistrationCard = ({ reg, allEvents }) => {
+    const isTeam = reg.teamMem?.length > 0;
+
+    // 1. Find the specific event in the global list using the slug
+    const eventDetails = allEvents.find((e) => e.slug === reg.event);
+
+    // 2. Check if the regfee is greater than 0
+    const requiresPayment = eventDetails && eventDetails.regfee > 0;
+
+    return (
+        <Card variant="outlined" sx={{ mb: 2 }}>
+            <CardContent sx={{ p: 2.5, "&:last-child": { pb: 2.5 } }}>
+
+                {/* Header */}
+                <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", mb: 1.5 }}>
+                    <Typography variant="h6" fontWeight={600} sx={{ fontSize: "1rem" }}>
+                        {formatEventName(reg.event)}
+                    </Typography>
+                    <Chip
+                        size="small"
+                        icon={isTeam ? <GroupsIcon /> : <PersonIcon />}
+                        label={isTeam ? "Team" : "Solo"}
+                        color={isTeam ? "primary" : "default"}
+                        variant="outlined"
+                    />
+                </Box>
+
+                <Typography variant="caption" color="text.secondary">
+                    Registered: {formatDate(reg.createdAt)}
+                </Typography>
+
+                {/* Team info */}
+                {isTeam && (
+                    <>
+                        <Divider sx={{ my: 1.5 }} />
+                        <Typography variant="body2" fontWeight={600} sx={{ mb: 1 }}>
+                            {reg.teamName || "—"}
+                        </Typography>
+                        <Typography variant="caption" color="text.secondary" sx={{ display: "block", mb: 0.5 }}>
+                            MEMBERS
+                        </Typography>
+                        {reg.teamMem.map((m, i) => (
+                            <Box key={i} sx={{ display: "flex", justifyContent: "space-between", mb: 0.5 }}>
+                                <Typography variant="body2">{m.name}</Typography>
+                                <Typography variant="body2" color="text.secondary">{m.phone}</Typography>
+                            </Box>
+                        ))}
+                    </>
+                )}
+
+                {/* Payment & Asset Section */}
+                <Divider sx={{ my: 1.5 }} />
+                <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
+
+                    {/* ONLY render the Payment box if it requires payment AND a link exists */}
+                    {requiresPayment && reg.paymentSS && reg.paymentSS.trim() !== "" && (
+                        <Box>
+                            <Typography variant="caption" color="text.secondary" sx={{ display: "block", mb: 0.5 }}>
+                                PAYMENT
+                            </Typography>
+                            <Chip
+                                size="small"
+                                label="View Receipt"
+                                icon={<OpenInNewIcon fontSize="small" />}
+                                onClick={() => window.open(reg.paymentSS, "_blank")}
+                                clickable
+                                color="success"
+                                variant="outlined"
+                            />
+                        </Box>
+                    )}
+
+                    {/* Asset — only if present */}
+                    {reg.assetUpload && reg.assetUpload.trim() !== "" && (
+                        <Box>
+                            <Typography variant="caption" color="text.secondary" sx={{ display: "block", mb: 0.5 }}>
+                                ASSET
+                            </Typography>
+                            <Chip
+                                size="small"
+                                label="View Asset"
+                                icon={<OpenInNewIcon fontSize="small" />}
+                                onClick={() => window.open(reg.assetUpload, "_blank")}
+                                clickable
+                                variant="outlined"
+                            />
+                        </Box>
+                    )}
+                </Box>
+
+            </CardContent>
+        </Card>
+    );
+};
 
 const MyRegistrations = () => {
-  const { user } = useAuth();
-  const [registrations, setRegistrations] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
-  const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+    const { userRegs, handleAllUserRegs, userLoad, allEvents } = useAuth();
 
-    useEffect(() => {
-    if (user) {
-        fetchRegistrations();
-    }
-    }, [user]);
+    return (
+        <Container maxWidth="md" sx={{ pt: 14, pb: 8 }}>
+            {/* 1. Heading isolated and centered */}
+            <Box sx={{ display: "flex", justifyContent: "center", mb: 4 }}>
+                <Typography 
+                    variant="h3" 
+                    component="h1" 
+                    fontWeight={700} 
+                    sx={{ textTransform: "uppercase", letterSpacing: 1 }}
+                >
+                    MY REGISTRATIONS
+                </Typography>
+            </Box>
 
-  const fetchRegistrations = async () => {
-    try {
-      setLoading(true);
-      setError('');
-      const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8000/api/v3/evregister/', {
-        headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' }
-      });
-      
-      if (!response.ok) throw new Error('No registrations found');
-      const data = await response.json();
-      setRegistrations(data.regs || []);
-      console.log('Registrations:', data.regs);  // DEBUG
-    } catch (err) {
-      setError('No registrations yet');
-      setRegistrations([]);
-    } finally {
-      setLoading(false);
-    }
-  };
+            {/* 2. "Toolbar" row right above the cards */}
+            <Box sx={{ display: "flex", justifyContent: "flex-end", alignItems: "center", mb: 2 }}>
+                {!userLoad && userRegs.length > 0 && (
+                    <Typography variant="body2" color="text.secondary" sx={{ flexGrow: 1 }}>
+                        {userRegs.length} registration{userRegs.length !== 1 ? "s" : ""}
+                    </Typography>
+                )}
+                <Tooltip title="Refresh">
+                    <IconButton onClick={handleAllUserRegs} disabled={userLoad}>
+                        <RefreshIcon />
+                    </IconButton>
+                </Tooltip>
+            </Box>
 
-  const formatDate = (dateString) => new Date(dateString).toLocaleDateString('en-IN');
-
-  if (loading) return (
-    <Container maxWidth="lg" sx={{ py: 8 }}>
-      <Headingv2 title="MY REGISTRATIONS" />
-      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 12 }}>
-        <CircularProgress size={60} />
-      </Box>
-    </Container>
-  );
-
-  return (
-    <Container maxWidth="lg" sx={{ py: 8 }}>
-      <Headingv2 title="MY REGISTRATIONS" />
-      
-      {error && (
-        <Alert severity="info" sx={{ mb: 4 }}>
-          {error}
-        </Alert>
-      )}
-
-      {registrations.length === 0 ? (
-        <Paper sx={{ p: 8, textAlign: 'center', mt: 4 }}>
-          <Typography variant="h6" color="text.secondary">No Registrations</Typography>
-          <Typography variant="body2" color="text.secondary">Register for events!</Typography>
-        </Paper>
-      ) : (
-        <Paper sx={{ mt: 4 }}>
-          <TableContainer sx={{ maxHeight: 600 }}>
-            <Table stickyHeader>
-              <TableHead>
-                <TableRow sx={{ bgcolor: 'primary.main' }}>
-                  <TableCell sx={{ color: 'white', fontWeight: 700 }}>Event</TableCell>
-                  <TableCell sx={{ color: 'white', fontWeight: 700 }}>Date</TableCell>
-                  <TableCell sx={{ color: 'white', fontWeight: 700 }}>Status</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {registrations.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((reg) => (
-                  <TableRow key={reg._id} hover>
-                    <TableCell sx={{ fontWeight: 500 }}>{reg.event || 'Event'}</TableCell>
-                    <TableCell>{formatDate(reg.createdAt)}</TableCell>
-                    <TableCell>
-                      <Chip label={reg.status || 'Confirmed'} color="primary" size="small" />
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-          <TablePagination
-            rowsPerPageOptions={[5, 10]}
-            count={registrations.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={(e, newPage) => setPage(newPage)}
-            onRowsPerPageChange={(e) => { setRowsPerPage(parseInt(e.target.value, 10)); setPage(0); }}
-          />
-        </Paper>
-      )}
-    </Container>
-  );
+            {/* 3. The conditionally rendered content */}
+            {userLoad ? (
+                <Box sx={{ display: "flex", justifyContent: "center", mt: 12 }}>
+                    <CircularProgress size={60} />
+                </Box>
+            ) : userRegs.length === 0 ? (
+                <Card variant="outlined" sx={{ p: 6, textAlign: "center" }}>
+                    <Typography variant="h6" color="text.secondary">No Registrations Yet</Typography>
+                    <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+                        Head over to the events page to register!
+                    </Typography>
+                </Card>
+            ) : (
+                <>
+                    {userRegs.map((reg) => (
+                        <RegistrationCard key={reg._id} reg={reg} allEvents={allEvents} />
+                    ))}
+                </>
+            )}
+        </Container>
+    );
 };
 
 export default MyRegistrations;

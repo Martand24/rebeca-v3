@@ -107,7 +107,7 @@ export const AuthProvider = ({ children }) => {
         try {
             const ev = await getAllUserRegs();
             // console.log("All events registered by user: ", ev.data.data.regs);
-            setUserRegs(ev.data.data.regs.map((e) => e.event));
+            setUserRegs(ev.data.data.regs);
         } catch (err) {
             showNotification(`Err: ${err.response?.data?.message || 'error fetching userRegs'}`, "info");
         }
