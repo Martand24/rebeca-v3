@@ -13,6 +13,8 @@ import EventReg from "./components/EventReg/EventReg";
 import PageNotFound from "./screens/PageNotFound/PageNotFound";
 import ComingSoon from "./screens/ComingSoon/ComingSoon";
 import Sponsors2 from "./screens/Sponsors2/Sponsors2";
+import MyRegistrations from "./screens/myRegistrations/myRegistrations"
+
 // import ComingSoon from "./screens/ComingSoon/ComingSoon";
 
 const AllRoutes = () => {
@@ -33,6 +35,7 @@ const AllRoutes = () => {
             {/* <Route exact path="/merchandise" element={<Merchandise />} /> */}
             <Route exact path="/merchandise" element={<ComingSoon />} />
             <Route exact path="/userUpdate" element={<ProfileDashboard />} />
+            <Route exact path="/my-registrations" element={<MyRegistrations />} />
             {/* <Route exact path="/events/:eventSlug/register" element={<EventReg />} /> */}
             <Route exact path="/*" element={<PageNotFound />} />
             <Route exact path="/sponsorship" element={<Sponsors2 />} />

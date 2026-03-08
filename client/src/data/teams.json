@@ -364,6 +364,10 @@
       {
         "name": "Sangam Gupta",
         "position": "Associate"
+      },
+      {
+        "name": "Anurag Panja",
+        "position": "Associate"
       }
     ]
   },
@@ -381,6 +385,10 @@
       },
       {
         "name": "Sneha Medda",
+        "position": "Head"
+      },
+      {
+        "name":"Ritesh Premchand Gupta",
         "position": "Head"
       },
       {
@@ -713,6 +721,10 @@
     "members": [
       {
         "name": "Rohan Vikas Kudtudkar",
+        "position": "Associate Head"
+      },
+      {
+        "name": "Shubhayu Sarkar",
         "position": "Associate Head"
       }
     ]

@@ -122,6 +122,13 @@ export default function AccountMenu() {
                     Edit Profile
                 </MenuItem>
 
+                <MenuItem onClick={() => navigate("/my-registrations")}>
+                    <ListItemIcon>
+                        <Settings fontSize="small" />
+                    </ListItemIcon>
+                    My Registrations
+                </MenuItem>
+
                 <MenuItem onClick={handleLogoutClick}>
                     <ListItemIcon>
                         <Logout fontSize="small" />
