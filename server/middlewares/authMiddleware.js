@@ -5,11 +5,11 @@ const checkAuth = async (req, res, next) => {
     const token = req.cookies.jwt; // Get the JWT from cookies
     if (!token) {
         console.log("There was no token");
-        return res.status(401).json({ message: "Log in to take part in events!" });
+        return res.status(200).json({ message: "Log in to take part in events!" });
     }
 
     if (!token || token === "loggedout") {
-        return res.status(401).json({ status: "info", message: "Log in to take part in events!" });
+        return res.status(200).json({ status: "info", message: "Log in to take part in events!" });
     }
 
     try {
