@@ -1,7 +1,5 @@
-import React from "react";
 import "./Schedule.css";
 import Eventcard from "../../components/Eventcard/Eventcard";
-import Events from "../../assets/data/events.json";
 import Heading from "../../components/Headingv2/Headingv2";
 import { useAuth } from "../../AuthContext";
 
@@ -18,22 +16,9 @@ const DAYS = [
 ];
 
 /**
- * Renders a single placeholder event card.
- * This is a placeholder - actual cards will be implemented later.
- */
-const EventCardPlaceholder = ({ event }) => (
-    <div className={`event-card-placeholder ${event.featured ? "event-card-placeholder--featured" : ""}`}>
-        <div className="event-card-placeholder__icon">
-            <img src={event.icon} alt="" />
-        </div>
-        <div className="event-card-placeholder__name">{event.name}</div>
-    </div>
-);
-
-/**
  * Renders one day section with title, time labels, and placeholder event cards.
  */
-const DaySection = ({ day, showDecorativeArrow }) => {
+const DaySection = ({ day }) => {
     const {allEventsByDay} = useAuth()    
     return (
         <>

@@ -4,14 +4,10 @@ import {
     Accordion,
     AccordionDetails,
     AccordionSummary,
-    Card,
-    CardContent,
     Typography,
-    CircularProgress,
     Container,
     Button,
     Box,
-    Divider
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CustomAvatar from "../../components/CustomAvatar/CustomAvatar";
@@ -51,6 +47,7 @@ function ProfessorsList() {
                         src={professor.img}
                         subtitle={professor.position}
                         icon={teamIcons["Secretary General"]}
+                        key={i}
                     />
                 );
             })}

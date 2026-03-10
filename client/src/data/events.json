@@ -137,7 +137,7 @@
     "slug": "film-fiesta",
     "type": "performance",
     "registration": "https://example.com/register",
-    "regfee": 200,
+    "regfee": 0,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
