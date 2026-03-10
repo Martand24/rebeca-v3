@@ -96,7 +96,7 @@ const EventSingle = () => {
                             <h1 className="event-single-title">{oneEvent?.name}</h1>
                             {oneEvent?.type !== "performance" && (
                                 <ButtonGroup variant="contained" size="large">
-                                    {userRegs.includes(eventSlug) ? (
+                                    {userRegs.some(reg => reg.event === eventSlug) ? (
                                         <Button
                                             startIcon={<CheckCircleRounded />}
                                             color="success"
