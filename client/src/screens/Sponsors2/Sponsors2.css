@@ -69,6 +69,10 @@
     width: min(100%, 1000px);
 }
 
+.sponsors2 .college p {
+    color: #ffffffbb;
+}
+
 .sponsors2 .college h1 {
     text-align: left;
     z-index: 2;
@@ -130,7 +134,11 @@
         font-size: 1.2rem;
     }
 
-    .sponsors2 section h1 {
+    .sponsors2 section > h1 {
         font-size: 3rem;
     } 
+
+    .sponsors2 .college .right img {
+        opacity: 0.7;
+    }
 }

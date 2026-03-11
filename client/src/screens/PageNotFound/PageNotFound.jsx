@@ -1,7 +1,5 @@
 import { Card, CardContent, Typography, Container, Button } from "@mui/material";
-import React from "react";
 import { useNavigate } from "react-router-dom";
-import ErrorRoundedIcon from "@mui/icons-material/ErrorRounded";
 
 const PageNotFoundIcon = () => {
     return (

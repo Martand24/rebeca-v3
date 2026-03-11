@@ -1,9 +1,10 @@
 import * as React from "react";
-import { Avatar, Menu, MenuItem, ListItemIcon, Divider, IconButton, Tooltip, Typography, Box } from "@mui/material";
+import { Avatar, Menu, MenuItem, Button, ListItemIcon, Divider, IconButton, Tooltip, Typography, Box } from "@mui/material";
 import { Settings, Logout } from "@mui/icons-material"; // Import icons
 import { useAuth } from "../../AuthContext";
 import { useNavigate } from "react-router-dom";
 import { GoogleLogin, useGoogleLogin } from "@react-oauth/google";
+import LoginIcon from "@mui/icons-material/Login";
 
 import "./AccountMenu.css";
 
@@ -36,6 +37,7 @@ export default function AccountMenu() {
 
     const handleSuccess = (response) => {
         handleLoginSuccess(response);
+        handleClose()
         setTimeout(() => navigate("/"), 500);
     };
 
@@ -141,15 +143,28 @@ export default function AccountMenu() {
         <React.Fragment>
             {/* The Trigger Button */}
             <Tooltip title={`Log In`}>
-                <IconButton
+                {/* <IconButton
                     onClick={handleClick}
                     size="small"
                     aria-controls={open ? "account-menu" : undefined}
                     aria-haspopup="true"
                     aria-expanded={open ? "true" : undefined}
+                    sx={{bgcolor: '#ffffff39', p: 1, border: '1px solid #fff'}}
                 >
-                    <Avatar sx={{ width: 40, height: 40, border: "2px solid var(--accent1)" }}></Avatar>
-                </IconButton>
+                    <LoginIcon color="primary"/>
+                </IconButton> */}
+                <Button
+                    variant="contained"
+                    endIcon={<LoginIcon />}
+                    sx={{ textDecoration: "none", textTransform: "none", fontFamily: 'var(--display-font)', width: 'max-content' }}
+                    onClick={handleClick}
+                    aria-controls={open ? "account-menu" : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? "true" : undefined}
+                    
+                >
+                    Log in
+                </Button>
             </Tooltip>
             <Menu
                 anchorEl={anchorEl}
@@ -187,7 +202,7 @@ export default function AccountMenu() {
                 anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
             >
                 <Box sx={{ px: 2, py: 1 }}>
-                    <Typography variant="caption" noWrap >
+                    <Typography variant="caption" noWrap>
                         Log in to take part in events!!
                     </Typography>
                 </Box>

@@ -1,5 +1,4 @@
-import * as React from "react";
-import { Typography, Box, Paper, Tooltip } from "@mui/material";
+import { Typography, Box, Paper } from "@mui/material";
 
 export default function RoundCard({ name, start, end, venue, i, hideHeading }) {
     return (

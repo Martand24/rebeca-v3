@@ -1,39 +1,35 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { IconButton, Fade } from "@mui/material";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { IconButton } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { useAuth } from "../../AuthContext";
 
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
 const GsapScrubber = () => {
     const canvasRef = useRef(null);
     const sectionRef = useRef(null);
-    const containerRef = useRef(null);
     const wordsRef = useRef([]);
-    const scrollTop = document.getElementById("are-you-ready");
+    const { preloadedImages } = useAuth(); // Images are already Image objects from Loader
 
-    const words = ["Welcome", "To", "Rebeca", "", ""];
+    const words = ["Welcome", "To", "Rebeca"];
     const totalFrames = 120;
-    const getFrameUrl = (index) => `/rebeca-pink-frames/ezgif-frame-${(index + 1).toString().padStart(3, "0")}.webp`;
 
     useEffect(() => {
+        // 1. Guard clause: Wait until images exist in context
+        if (!preloadedImages || preloadedImages.length === 0) return;
+
         const canvas = canvasRef.current;
         const context = canvas.getContext("2d");
-        const airpods = { frame: 0 };
-        const images = [];
+        const scrubberState = { frame: 0 };
 
-        for (let i = 0; i < totalFrames; i++) {
-            const img = new Image();
-            img.src = getFrameUrl(i);
-            images.push(img);
-        }
-
+        // 2. Optimized Render Function
         const render = () => {
-            const img = images[airpods.frame];
+            const img = preloadedImages[Math.round(scrubberState.frame)];
             if (!img) return;
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
 
             const imgRatio = img.width / img.height;
             const canvasRatio = canvas.width / canvas.height;
@@ -55,26 +51,34 @@ const GsapScrubber = () => {
             context.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
         };
 
-        // Show button once the first image loads
-        images[0].onload = () => {
+        // 3. Handle Resizing Separately (Not in render loop)
+        const handleResize = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
             render();
         };
 
+        // Initial setup
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        // 4. GSAP Timeline
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: sectionRef.current,
                 start: "top top",
-                end: "+=500%",
-                scrub: 1,
+                end: "+=600%",
+                scrub: true, // Slightly lower scrub for smoother follow
                 pin: true,
                 anticipatePin: 1,
             },
         });
 
+        // Image Sequence Animation
         tl.to(
-            airpods,
+            scrubberState,
             {
-                frame: totalFrames - 1,
+                frame: preloadedImages.length - 1,
                 snap: "frame",
                 ease: "none",
                 onUpdate: render,
@@ -82,48 +86,53 @@ const GsapScrubber = () => {
             0,
         );
 
+        // Text Animations
+        const wordConfigs = [
+            { start: 0, end: 0.10 }, // "Welcome" - Quick in and out
+            { start: 0.1, end: 0.2 }, // "To" - Quick in and out
+            { start: 0.3, end: 1.5 }, // "Rebeca" - Starts later, stays until the end
+        ];
         words.forEach((_, i) => {
-            const targetFrame = (i + 1) * 12;
-            const startTime = targetFrame / totalFrames;
+            const config = wordConfigs[i];
+            if (!config) return;
 
+            // ANIMATE IN
             tl.to(
                 wordsRef.current[i],
                 {
                     opacity: 1,
                     y: 0,
                     filter: "blur(0px)",
-                    duration: 0.05,
+                    duration: 0.1, // Controls speed of fade-in
                     ease: "power2.out",
                 },
-                startTime - 0.05,
+                config.start,
             );
 
-            if (i !== 2) {
+            // ANIMATE OUT (Skip for the last word)
+            if (i !== words.length - 1) {
                 tl.to(
                     wordsRef.current[i],
                     {
                         opacity: 0,
                         y: -40,
                         filter: "blur(20px)",
-                        duration: 0.05,
+                        duration: 0.1, // Controls speed of fade-out
                         ease: "power2.in",
                     },
-                    startTime + 0.05,
+                    config.end,
                 );
             }
         });
-
-        window.addEventListener("resize", render);
         return () => {
-            window.removeEventListener("resize", render);
+            window.removeEventListener("resize", handleResize);
             ScrollTrigger.getAll().forEach((t) => t.kill());
         };
-    }, []);
+    }, [preloadedImages]); // Re-run once images arrive from AuthContext
 
     return (
         <section ref={sectionRef} style={{ overflow: "hidden", backgroundColor: "#000" }}>
             <div
-                ref={containerRef}
                 style={{
                     height: "100vh",
                     width: "100%",
@@ -131,7 +140,6 @@ const GsapScrubber = () => {
                     alignItems: "center",
                     justifyContent: "center",
                     position: "relative",
-                    zIndex: 0,
                 }}
             >
                 {words.map((word, index) => (
@@ -142,7 +150,7 @@ const GsapScrubber = () => {
                             position: "absolute",
                             zIndex: 10,
                             color: "white",
-                            fontSize: "clamp(5rem, 12vw, 12rem)",
+                            fontSize: "clamp(4rem, 10vw, 10rem)",
                             fontWeight: "900",
                             textTransform: "uppercase",
                             opacity: 0,
@@ -150,35 +158,40 @@ const GsapScrubber = () => {
                             filter: "blur(20px)",
                             pointerEvents: "none",
                             textAlign: "center",
-                            fontFamily: "Sedgwick Ave Display, -apple-system, sans-serif",
-                            textShadow: "0,0,10px #000"
+                            fontFamily: "Sedgwick Ave Display, sans-serif",
                         }}
                     >
                         {word}
                     </h1>
                 ))}
 
-                <canvas ref={canvasRef} style={{ display: "block" }} />
-
-                {/* --- THE SCROLL BUTTON --- */}
+                <canvas ref={canvasRef} style={{ display: "block", position: "absolute", top: 0, left: 0 }} />
 
                 <IconButton
-                    onClick={() =>
-                        window.scrollTo({
-                            top: scrollTop.offsetTop,
-                            behavior: "smooth",
-                        })
-                    }
+                    onClick={() => {
+                        gsap.to(window, {
+                            duration: 7, // SET YOUR SPEED HERE (in seconds)
+                            scrollTo: {
+                                y: "#are-you-ready",
+                                autoKill: true, // Allows user to interrupt the scroll by manual scrolling
+                            },
+                            // ease: "power2.inOut", // Makes the start/end feel smoother
+                        });
+                    }}
                     sx={{
                         position: "absolute",
+
                         bottom: 40,
+
                         zIndex: 20,
+
                         color: "white",
-                        border: "1.5px solid rgba(255, 255, 255, 0.53)",
+
+                        border: "1.5px solid rgba(255, 255, 255, 0.5)",
+
                         animation: "bounce 2s infinite",
-                        backdropFilter: "blur(20px)",
-                        boxShadow: "0 0 10px #000",
-                        bgcolor: "var(--accent2)"
+
+                        backdropFilter: "blur(10px)",
                     }}
                 >
                     <KeyboardArrowDownIcon fontSize="large" />

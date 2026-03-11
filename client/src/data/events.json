@@ -137,7 +137,7 @@
     "slug": "film-fiesta",
     "type": "performance",
     "registration": "https://example.com/register",
-    "regfee": 200,
+    "regfee": 0,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "",
     "thumbnail": "https://placehold.co/150x150.jpg",
@@ -1022,15 +1022,15 @@
         "name": "Online Submission",
         "desc": "o Participants must submit their best photograph based on the given theme.\no Submission deadline 17th March ,2026 .\no Entries will be judged based on creativity, composition, and adherence to theme.",
         "start": "Started",
-        "end": "17 March  16:00",
+        "end": "17 March 2026 16:00",
         "venue": "Online"
       },
       {
         "no": 2,
         "name": "Finals",
         "desc": "o Selected participants from Round 1 will compete in an on-campus photography challenge.\no A theme will be given on the spot, and participants will have a set time limit to capture and submit their photos. \no Editing will be allowed only within the permitted software/tools.",
-        "start": "17 March ",
-        "end": "17 March",
+        "start": "17 March 2026 ",
+        "end": "17 March 2026 ",
         "venue": "IIEST Shibpur"
       }
     ],
@@ -1143,7 +1143,7 @@
       "no": 1,
       "name": "Movie Scene Recreation",
       "desc": "Teams will recreate a selected movie scene and present it before the judges. Creativity, acting, and fidelity to the original scene will be considered in the evaluation.",
-      "start": "19 March 6:00 PM",
+      "start": "19 March 2026 6:00 PM",
       "end": "",
       "venue": "IIEST Shibpur"
     }
@@ -1181,16 +1181,16 @@
       "no": 1,
       "name": "Qualifiers",
       "desc": "Qualifier round for Typist Tourney Finals. Participants will compete in a typing speed challenge on the MonkeyType platform.",
-      "start": "19 March 7:30 PM",
-      "end": "19 March 9:00 PM",
+      "start": "19 March 2026 7:30 PM",
+      "end": "19 March 2026 9:00 PM",
       "venue": "Parade Ground Stall"
     },
     {
       "no": 2,
       "name": "Finals",
       "desc": "Top 10 finalists from Round 1 will compete in the final typing speed challenge to determine the fastest typist.",
-      "start": "20 March 8:00 PM",
-      "end": "20 March 9:00 PM",
+      "start": "20 March 2026 8:00 PM",
+      "end": "20 March 2026 9:00 PM",
       "venue": "Parade Ground Stall"
     }
   ],
@@ -1227,8 +1227,8 @@
       "no": 1,
       "name": "Poster Submission",
       "desc": "Participants must register through the official REBECA website and complete the payment. The WhatsApp group link will be shared and participants will be added for further updates. Participants must redesign a poster of any retro film (any language) in a modern style while retaining its core essence. Only one original entry is allowed (AI strictly prohibited). The submission must be in JPEG/PNG format with a 4:5 ratio along with the editable design link via the provided Google Form.",
-      "start": "19 March",
-      "end": "22 March 6:00 PM",
+      "start": "19 March 2026",
+      "end": "22 March 2026 6:00 PM",
       "venue": "Online"
     }
   ],
@@ -1265,7 +1265,7 @@
       "no": 1,
       "name": "Photowalk",
       "desc": "Participants will gather and visit a selected location to capture photographs, primarily focusing on street photography. This is not a competitive event.",
-      "start": "16 March 6:00 AM",
+      "start": "16 March 2026 6:00 AM",
       "end": "",
       "venue": "To Be Announced"
     }
@@ -1303,7 +1303,7 @@
       "no": 1,
       "name": "Workshop Session",
       "desc": "It will be a photography workshop consisting of the audience and the artist, focusing on learning photography techniques and interaction.",
-      "start": "16 March 4:00 PM",
+      "start": "16 March 2026 4:00 PM",
       "end": "",
       "venue": "IIEST Shibpur"
     }
@@ -1341,8 +1341,8 @@
       "no": 1,
       "name": "Photography Exhibition",
       "desc": "Display of selected photographs in printed frames. Participants can submit their best captures for selection. Selected photographs will be printed and displayed in an exhibition format. Submission deadline: 18 March 2026.",
-      "start": "19 March",
-      "end": "22 March",
+      "start": "19 March 2026",
+      "end": "22 March 2026",
       "venue": "IIEST Shibpur"
     }
   ],
@@ -1379,8 +1379,8 @@
       "no": 1,
       "name": "Shutter Sprint Challenge",
       "desc": "Participants will be given blurred photographs and must identify the location, recreate the same frame from the same perspective, and submit the photo along with a group selfie at the spot.",
-      "start": "20 March 3:00 PM",
-      "end": "20 March 6:00 PM",
+      "start": "20 March 2026 3:00 PM",
+      "end": "20 March 2026 6:00 PM",
       "venue": "IIEST Shibpur Campus"
     }
   ],

@@ -87,7 +87,7 @@ const Footer2 = () => {
                 <div className="social">
                     <div className="social-h">Visit us Virtually</div>
                     <div className="social-icons">
-                        <a href="mailto: rebeca@iiests.ac.in">
+                        <a href="mailto: support@rebeca.in">
                             <IconButton sx={{bgcolor: 'var(--accent2)', '&:hover':{
                                 bgcolor: 'rgb(93, 93, 93)'
                             }}} size="medium">

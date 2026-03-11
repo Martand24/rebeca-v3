@@ -1,7 +1,5 @@
-import React from "react";
 import Button from "../../components/Button/Button";
 import WhySponsorBento from "../../components/WhySponsorBento/WhySponsorBento";
-import SponsorSkillTree from "../../components/SponsorSkillTree/SponsorSkillTree";
 import "./Sponsors2.css";
 import spdata from "../../assets/data/pastSponsors.json";
 import SponsorsMarquee from "../../components/SponsorsMarquee/SponsorsMarquee";

@@ -9,10 +9,24 @@ import DiamondIcon from "@mui/icons-material/Diamond";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
 const tiers = [
-    { id: 1, name: "BECA SPONSOR", amount: "6 LAKH", icon: <ChangeHistoryIcon />, focusColor: "#fbc02d" }, // Green
-    { id: 2, name: "ASSOCIATE SPONSOR", amount: "13 LAKH", icon: <WidgetsIcon />, focusColor: "#4caf50" }, // Yellow/Gold
-    { id: 3, name: "CO-SPONSOR", amount: "16 LAKH", icon: <AllInclusiveIcon />, focusColor: "#e91e63" }, // Pink
-    { id: 4, name: "TITLE SPONSOR", amount: "19 LAKH", icon: <DiamondIcon />, focusColor: "#1a8fe3" }, // Blue
+    {
+        id: 1,
+        name: "BECA SPONSOR",
+        amount: "6 LAKH",
+        icon: <ChangeHistoryIcon />,
+        focusColor: "#fbc02d",
+        label: "BECA",
+    }, // Green
+    {
+        id: 2,
+        name: "ASSOCIATE SPONSOR",
+        amount: "13 LAKH",
+        icon: <WidgetsIcon />,
+        focusColor: "#4caf50",
+        label: "Associate",
+    }, // Yellow/Gold
+    { id: 3, name: "CO-SPONSOR", amount: "16 LAKH", icon: <AllInclusiveIcon />, focusColor: "#e91e63", label: "Co" }, // Pink
+    { id: 4, name: "TITLE SPONSOR", amount: "19 LAKH", icon: <DiamondIcon />, focusColor: "#1a8fe3", label: "Title" }, // Blue
 ];
 
 const perksData = {
@@ -61,7 +75,7 @@ export default function SponsorsCategory() {
                             key={tier.id}
                             icon={tier.icon}
                             iconPosition="top"
-                            label={tier.name}
+                            label={tier.label}
                             sx={{
                                 fontWeight: "bold",
                                 fontSize: "0.7rem",
@@ -82,19 +96,10 @@ export default function SponsorsCategory() {
 
             {/* Content Area */}
             <Box sx={{ p: 2, bgcolor: "background.paper" }}>
-                <Typography
-                    variant="h1"
-                    sx={{
-                        textAlign: "center",
-                        fontWeight: 800,
-                        color: tiers[value].focusColor, // Text matches the tab color
-                        transition: "color 0.3s ease",
-                        fontFamily: "var(--heading-font)",
-                    }}
-                >
-                    {tiers[value].amount}
-                </Typography>
-
+                <h2 style={{ width: "100%", textAlign: "center", fontFamily: "var(--heading-font)", lineHeight: '1em' }}>
+                    {tiers[value].name}
+                </h2>
+                <h1 style={{ color: tiers[value].focusColor }}>{tiers[value].amount}</h1>
                 <Divider sx={{ my: 3 }}>
                     <Typography
                         variant="overline"

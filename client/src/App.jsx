@@ -7,7 +7,6 @@ import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Footer2 from "./components/Footer2/Footer2.jsx";
 
-
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import { AuthProvider } from "./AuthContext.jsx";
@@ -15,7 +14,7 @@ import DrawingLoader from "./components/Preloader/DrawingLoader.jsx";
 import ScrollSmoother from "./components/ScrollSmoother/ScrollSMoother.jsx";
 
 // 1. IMPORT YOUR NEW COMPONENT (Adjust the path if you saved it elsewhere)
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx"; 
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.jsx";
 
 const client_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 export const nights = { saptami: 19, ashtami: 20, navami: 21, dashami: 22 };
@@ -24,18 +23,18 @@ const darkTheme = createTheme({
     palette: {
         mode: "dark",
         primary: {
-            main: "#ff3593", 
+            main: "#ff3593",
         },
         secondary: {
-            main: "#7e34ff", 
+            main: "#7e34ff",
         },
         background: {
-            default: "#1a1a1a", 
-            paper: "#1d1d1d", 
+            default: "#1a1a1a",
+            paper: "#1d1d1d",
         },
         text: {
-            primary: "#ffffff", 
-            secondary: "#bdbdbd", 
+            primary: "#ffffff",
+            secondary: "#bdbdbd",
         },
     },
 });
@@ -46,20 +45,22 @@ function App() {
     return (
         <ScrollSmoother>
             <GoogleOAuthProvider clientId={client_ID}>
-                {isLoading && <DrawingLoader onComplete={() => setIsLoading(false)} />}
-                <div
-                    className="App"
-                    style={{ visibility: isLoading ? "hidden" : "visible", transition: "visibility 0.3s ease" }}
-                >
+                <div className="App">
                     <ThemeProvider theme={darkTheme}>
                         <CssBaseline />
                         <SpeedInsights />
                         <Analytics />
                         <AuthProvider>
-                            <Router>
+                            {isLoading && <DrawingLoader onComplete={() => setIsLoading(false)} />}
+                            <Router
+                                style={{
+                                    visibility: isLoading ? "hidden" : "visible",
+                                    transition: "visibility 0.3s ease",
+                                }}
+                            >
                                 {/* 2. DROP IT RIGHT HERE INSIDE THE ROUTER */}
                                 <ScrollToTop />
-                                
+
                                 <Navbar></Navbar>
                                 <AllRoutes></AllRoutes>
                                 {/* <Footer></Footer> */}

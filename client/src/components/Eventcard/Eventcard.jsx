@@ -2,20 +2,20 @@ import { React, useState, useEffect } from "react";
 import "./Eventcard.css";
 import { Link, useNavigate } from "react-router-dom";
 import LaunchIcon from "@mui/icons-material/Launch";
-import NewReleasesIcon from "@mui/icons-material/NewReleases";
-import GroupsIcon from "@mui/icons-material/Groups";
-import RunCircleIcon from "@mui/icons-material/RunCircle";
+import NewReleasesTwoToneIcon from '@mui/icons-material/NewReleasesTwoTone';
+import Groups2TwoToneIcon from '@mui/icons-material/Groups2TwoTone';
+import RunCircleTwoToneIcon from '@mui/icons-material/RunCircleTwoTone';
 import { Tooltip } from "@mui/material";
 
 const EventTypeIcon = ({ type, f = 24 }) => {
     const badgeStyle = { fontSize: f };
     switch (type) {
         case "single":
-            return <RunCircleIcon sx={badgeStyle} color="success" />;
+            return <RunCircleTwoToneIcon sx={badgeStyle} color="success" />;
         case "team":
-            return <GroupsIcon sx={badgeStyle} color="warning" />;
+            return <Groups2TwoToneIcon sx={badgeStyle} color="warning" />;
         default:
-            return <NewReleasesIcon sx={{ fontSize: f }} color="info" />;
+            return <NewReleasesTwoToneIcon sx={{ fontSize: f }} color="info" />;
     }
 };
 

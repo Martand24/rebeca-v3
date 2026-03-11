@@ -10,18 +10,12 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-
-import {
-    Home as HomeIcon,
-    Event as EventIcon,
-    AttachMoney as SponsorshipIcon,
-    Groups as TeamIcon,
-    ShoppingBag as MerchandiseIcon,
-    Close,
-    FavoriteBorderOutlined,
-    Favorite,
-    East,
-} from "@mui/icons-material";
+import WindowTwoToneIcon from '@mui/icons-material/WindowTwoTone';
+import StadiumTwoToneIcon from '@mui/icons-material/StadiumTwoTone';
+import HandshakeTwoToneIcon from '@mui/icons-material/HandshakeTwoTone';
+import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
+import Diversity1TwoToneIcon from '@mui/icons-material/Diversity1TwoTone';
+import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from "react-router-dom";
 import { Typography, Button, Box } from "@mui/material";
 
@@ -35,12 +29,14 @@ const DrawerHeader = styled("div")(({ theme }) => ({
     justifyContent: "flex-start",
 }));
 
+const iconSx = { width: 40, height: 40 }
+
 const menuItems = [
-    { text: "Home", icon: <HomeIcon />, link: "/" },
-    { text: "Events", icon: <EventIcon />, link: "/events" },
-    { text: "Sponsorship", icon: <SponsorshipIcon />, link: "/sponsorship" },
-    { text: "Our Team", icon: <TeamIcon />, link: "/team" },
-    { text: "Merchandise", icon: <MerchandiseIcon />, link: "/merchandise" },
+    { text: "Home", icon: <WindowTwoToneIcon sx={iconSx} color="warning"/>, link: "/" },
+    { text: "Events", icon: <StadiumTwoToneIcon sx={iconSx} color="info" />, link: "/events" },
+    { text: "Sponsorship", icon: <HandshakeTwoToneIcon sx={iconSx} color="error" />, link: "/sponsorship" },
+    { text: "Our Team", icon: <Diversity1TwoToneIcon sx={iconSx} color="success" />, link: "/team" },
+    { text: "Merchandise", icon: <ShoppingCartTwoToneIcon sx={iconSx} color="primary" />, link: "/merchandise" },
 ];
 
 const RespDrawer = ({ open, onClose }) => {
@@ -68,7 +64,7 @@ const RespDrawer = ({ open, onClose }) => {
                     style={{ padding: "1rem 0px", width: "100px", marginLeft: "10px" }}
                 />
                 <IconButton onClick={() => onClose()}>
-                    <Close />
+                    <CloseIcon />
                 </IconButton>
             </DrawerHeader>
             <Divider />
@@ -92,6 +88,7 @@ const RespDrawer = ({ open, onClose }) => {
                                 }}
                                 disableRipple
                             >
+                                {item.icon}
                                 <ListItemText
                                     primary={item.text}
                                     sx={{ color: item.text === nav ? "var(--accent2)" : "" }}
@@ -100,7 +97,7 @@ const RespDrawer = ({ open, onClose }) => {
                         </ListItem>
                     ))}
                 </Box>
-                <ListItem
+                {/* <ListItem
                     sx={{
                         display: "flex",
                         justifyContent: "center",
@@ -130,7 +127,7 @@ const RespDrawer = ({ open, onClose }) => {
                     >
                         Join as Volunteer
                     </Button>
-                </ListItem>
+                </ListItem> */}
             </List>
         </Drawer>
     );

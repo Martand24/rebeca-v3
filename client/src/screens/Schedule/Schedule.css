@@ -1,6 +1,16 @@
 .schedule-page {
     color: #fff;
     animation: fadeIn 0.5s linear forwards;
+    position: relative;
+}
+
+.schedule-page > * {
+    z-index: 2;
+}
+
+.schedule-page h1 {
+    font-family: var(--heading-font);
+    font-size: 6rem;
 }
 
 /* ---------- Hero Header ---------- */
@@ -18,17 +28,18 @@
 }
 
 /* Background image layer */
-.schedule-header__bg {
-    position: absolute;
-    inset: 0;
+.schedule-pg-bg {
+    position: sticky;
+    top: 0;
     z-index: 0;
+    width: 100%;
 }
 
-.schedule-header__bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+.schedule-pg-bg img {
+    width: max(900px, 100%);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Content on top of the hero image */
@@ -100,5 +111,9 @@
     }
 }
 
-
-
+@media only screen and (max-width: 450px) {
+    .day-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

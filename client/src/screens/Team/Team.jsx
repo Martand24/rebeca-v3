@@ -4,14 +4,10 @@ import {
     Accordion,
     AccordionDetails,
     AccordionSummary,
-    Card,
-    CardContent,
     Typography,
-    CircularProgress,
     Container,
     Button,
     Box,
-    Divider
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CustomAvatar from "../../components/CustomAvatar/CustomAvatar";
@@ -37,7 +33,7 @@ function ProfessorsList() {
                 margin: "0 2rem",
                 gap: 5,
                 borderRadius: "5px",
-                bgcolor: "#c234ff36",
+                bgcolor: "#ffffff27",
                 display: "flex",
                 flexWrap: "wrap",
                 justifyContent: "center",
@@ -51,6 +47,7 @@ function ProfessorsList() {
                         src={professor.img}
                         subtitle={professor.position}
                         icon={teamIcons["Secretary General"]}
+                        key={i}
                     />
                 );
             })}
@@ -60,12 +57,15 @@ function ProfessorsList() {
 
 const Team = () => {
     const { allTeams } = useAuth();
+    const phone = window.innerWidth <= 450
 
     return (
         allTeams && (
             <div className="team">
-                <Heading title={"MEET OUR TEAM"}/>
-                <ProfessorsList />
+                <div className="backdrop">
+                    <img src={"/assets/imgs/Faculty/backdrop.webp"} />
+                </div>
+                <h1>Meet our Team</h1>
                 <Box sx={{
                     display: "flex",
                     alignItems: "center",
@@ -75,10 +75,10 @@ const Team = () => {
                     margin: "2rem 0",
                     borderRadius: "5px"
                 }}>
-                    <Typography textAlign={"center"} sx={{fontSize: "1.2rem", maxWidth: '70ch', fontFamily: 'var(--body-font)'}} color="text.secondary">
-                    We are excited to invite you to be a part of REBECA as a <b>volunteer</b>! This is your chance to contribute, gain hands-on experience, and be a part of an incredible event. Whether you're interested in event management, social media, technical support, or hospitality, there's a place for you on our team!
+                    <Typography textAlign={"center"} sx={{fontSize: "1.2rem", maxWidth: '70ch', fontFamily: 'var(--body-font)', p: 2}} >
+                    Meet the diverse teams behind Rebeca — a collective of passionate students across various domains, working alongside our respected professors. Each team plays a vital role in shaping the fest, bringing together creativity, coordination, and dedication to deliver a seamless and memorable experience for everyone who takes part in the celebration.
                     </Typography>
-                    <Button
+                    {/* <Button
                         size="large"
                         variant="contained"
                         startIcon={<Favorite />}
@@ -88,8 +88,9 @@ const Team = () => {
                         color="secondary"
                     >
                         Join as Volunteer
-                    </Button>
+                    </Button> */}
                 </Box>
+                <ProfessorsList />
                 <Container className="team-container">
                     {allTeams.map((teamData, i) => {
                         if (teamData.members.length === 0) return;
@@ -114,8 +115,10 @@ const Team = () => {
                                 <AccordionDetails>
                                     <Container
                                         sx={{
-                                            p: 5,
+                                            p: phone ? 1:5,
                                             display: "flex",
+                                            justifyContent: 'center',
+                                            alignItems: 'start',
                                             flexWrap: "wrap",
                                             gap: 2,
                                             bgcolor: "#171717",
