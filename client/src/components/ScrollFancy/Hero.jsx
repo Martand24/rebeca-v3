@@ -87,45 +87,43 @@ const GsapScrubber = () => {
         );
 
         // Text Animations
+        const wordConfigs = [
+            { start: 0, end: 0.10 }, // "Welcome" - Quick in and out
+            { start: 0.1, end: 0.2 }, // "To" - Quick in and out
+            { start: 0.3, end: 1.5 }, // "Rebeca" - Starts later, stays until the end
+        ];
         words.forEach((_, i) => {
-            const startTime = (i / words.length) * 0.6; // Distribute across timeline
+            const config = wordConfigs[i];
+            if (!config) return;
 
+            // ANIMATE IN
             tl.to(
                 wordsRef.current[i],
                 {
                     opacity: 1,
                     y: 0,
                     filter: "blur(0px)",
-                    duration: 0.1,
+                    duration: 0.1, // Controls speed of fade-in
                     ease: "power2.out",
                 },
-                startTime,
+                config.start,
             );
-            if (i === words.length - 1) {
+
+            // ANIMATE OUT (Skip for the last word)
+            if (i !== words.length - 1) {
                 tl.to(
                     wordsRef.current[i],
                     {
-                        opacity: 1,
-                        duration: 0.01,
+                        opacity: 0,
+                        y: -40,
+                        filter: "blur(20px)",
+                        duration: 0.1, // Controls speed of fade-out
                         ease: "power2.in",
                     },
-                    startTime + 0.15,
+                    config.end,
                 );
-                return;
-            } // Don't animate out the last word
-            tl.to(
-                wordsRef.current[i],
-                {
-                    opacity: 0,
-                    y: -40,
-                    filter: "blur(20px)",
-                    duration: 0.1,
-                    ease: "power2.in",
-                },
-                startTime + 0.15,
-            );
+            }
         });
-
         return () => {
             window.removeEventListener("resize", handleResize);
             ScrollTrigger.getAll().forEach((t) => t.kill());
