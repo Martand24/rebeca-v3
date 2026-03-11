@@ -22,7 +22,6 @@ const ScrollSmoother = ({ children }) => {
     lenisInstance = lenis; // Store the instance globally
 
     lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.lagSmoothing(0); // Add this line!
 
     const tickerFunction = (time) => {
       lenis.raf(time * 1000);

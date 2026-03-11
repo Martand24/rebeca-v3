@@ -4,35 +4,22 @@ import { useAuth } from "../../AuthContext";
 const styles = {
     wrapper: {
         position: "fixed",
-
         inset: 0,
-
         zIndex: 1000,
-
         display: "flex",
-
         background: "#000",
-
         flexDirection: "column",
-
         justifyContent: "center",
-
         alignItems: "center",
     },
 
     loadingText: {
         color: "white",
-
         opacity: 1,
-
         fontWeight: "300",
-
         fontSize: "1rem",
-
         textAlign: "center",
-
         width: "80%",
-
         zIndex: 100000,
     },
 };

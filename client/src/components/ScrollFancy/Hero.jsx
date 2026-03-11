@@ -15,7 +15,7 @@ const GsapScrubber = () => {
     const wordsRef = useRef([]);
     const { preloadedImages } = useAuth(); // Images are already Image objects from Loader
 
-    const words = ["Welcome", "To", "Rebeca", "", ""];
+    const words = ["Welcome", "To", "Rebeca"];
     const totalFrames = 120;
 
     useEffect(() => {
@@ -67,7 +67,7 @@ const GsapScrubber = () => {
             scrollTrigger: {
                 trigger: sectionRef.current,
                 start: "top top",
-                end: "+=500%",
+                end: "+=600%",
                 scrub: true, // Slightly lower scrub for smoother follow
                 pin: true,
                 anticipatePin: 1,
@@ -88,7 +88,7 @@ const GsapScrubber = () => {
 
         // Text Animations
         words.forEach((_, i) => {
-            const startTime = (i / words.length) * 0.8; // Distribute across timeline
+            const startTime = (i / words.length) * 0.6; // Distribute across timeline
 
             tl.to(
                 wordsRef.current[i],
@@ -100,7 +100,20 @@ const GsapScrubber = () => {
                     ease: "power2.out",
                 },
                 startTime,
-            ).to(
+            );
+            if (i === words.length - 1) {
+                tl.to(
+                    wordsRef.current[i],
+                    {
+                        opacity: 1,
+                        duration: 0.01,
+                        ease: "power2.in",
+                    },
+                    startTime + 0.15,
+                );
+                return;
+            } // Don't animate out the last word
+            tl.to(
                 wordsRef.current[i],
                 {
                     opacity: 0,
@@ -167,8 +180,7 @@ const GsapScrubber = () => {
                             // ease: "power2.inOut", // Makes the start/end feel smoother
                         });
                     }}
-                     sx={{
-
+                    sx={{
                         position: "absolute",
 
                         bottom: 40,
@@ -182,7 +194,6 @@ const GsapScrubber = () => {
                         animation: "bounce 2s infinite",
 
                         backdropFilter: "blur(10px)",
-
                     }}
                 >
                     <KeyboardArrowDownIcon fontSize="large" />
