@@ -5,15 +5,15 @@ const uploadToCloudinary = require("../utils/cloudinary").uploadToCloudinary;
 const deleteFromCloudinary = require("../utils/cloudinary").deleteFromCloudinary;
 // const sendEmail = require("../utils/email");
 
-exports.createUser = catchAsync(async (userData) => {
+exports.createUser = async (userData) => {
     const user = await User.create({
         name: userData.name,
         email: userData.email,
         image: userData.image,
         googleId: userData.googleId,
     });
-    return user;
-});
+    return user; 
+};
 
 exports.updateUser = catchAsync(async (req, res, next) => {
     console.log("request for user update received");
