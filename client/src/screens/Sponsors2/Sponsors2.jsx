@@ -46,8 +46,8 @@ const Sponsors2 = () => {
                 <h1>Lets start with a little about our College</h1>
                 <div className="left">
                     <p>
-                        IIEST, Shibpur, (formerly known as Bengal Engineering College), is one of India's oldest
-                        engineering institutions. Renowned for its excellence in engineering education and a strong
+                        IIEST, Shibpur, (formerly known as Bengal Engineering College), is the 2nd oldest
+                        engineering institution in India. Renowned for its excellence in engineering education and a strong
                         emphasis on research, the institute nurtures aspiring engineers and scientists to become leaders
                         in their fields. Since the last 168 years, our college has been producing scores of
                         distinguished alumni who have made us immensely proud through their work and dedication.
